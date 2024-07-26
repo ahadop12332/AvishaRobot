@@ -16,10 +16,10 @@ async def wish(_, m):
             url = api["results"][0]['url']
             text = m.text.split(None, 1)[1]
             wish_count = random.randint(1,100)
-            wish = f"❖ **ʜᴇʏ {m.from_user.first_name} ♥︎** "
+            wish = f"𖣐 **ʜᴇʏ {m.from_user.first_name} ♥︎** "
             wish += f"\n\n● **ʏᴏᴜʀ ᴡɪꜱʜ** ➥ **{text}** "
             wish += f"\n● **ᴘᴏꜱꜱɪʙʟᴇ ᴛᴏ ➥ {wish_count}%**"
-            wish += f"\n\n❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ [๛ᴀ ᴠ ɪ s ʜ ᴀ ࿐](https://t.me/the_friendz)"
+            wish += f"\n\n𖣐 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ [ʟ ᴜ ᴄ ʏ • / ‹𝟹](https://t.me/PhoenixXsupport)"
             await m.reply_animation(url,caption=(wish),
               reply_markup=InlineKeyboardMarkup(
                     [ [InlineKeyboardButton("ꜱᴜᴘᴘᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}")]]))
