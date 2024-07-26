@@ -37,8 +37,8 @@ def totranslate(update: Update, context: CallbackContext) -> None:
         dest = "en"
     translation = trans(to_translate, sourcelang=source, targetlang=dest)
     reply = (
-        f"❖ <b>ᴛʀᴀɴsʟᴀᴛᴇᴅ ғʀᴏᴍ {source} ᴛᴏ {dest}</b> ➥\n\n"
-        f"♥︎ {translation.text}\n\n❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ ๛ᴀ ᴠ ɪ s ʜ ᴀ ࿐"
+        f"𖣐 <b>ᴛʀᴀɴsʟᴀᴛᴇᴅ ғʀᴏᴍ {source} ᴛᴏ {dest}</b> ➥\n\n"
+        f"♥︎ {translation.text}\n\n𖣐 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ ʟ ᴜ ᴄ ʏ • / ‹𝟹"
     )
 
     message.reply_text(reply, parse_mode=ParseMode.HTML)
@@ -71,7 +71,7 @@ AVISHA = "https://graph.org/file/dcc62e53435a919373a0a.jpg"
 async def repo(client, message):
     await message.reply_photo(
         photo=AVISHA,
-        caption=f"""❖ ʜᴇʏ {message.from_user.mention()}, ᴡᴇʟᴄᴏᴍᴇ ʙᴀʙʏ ♥︎\n\n⬤ ɪғ ʏᴏᴜ ᴡᴀɴᴛ [{dispatcher.bot.first_name}](t.me/{dispatcher.bot.username}) ʙᴏᴛ ʀᴇᴘᴏ, ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʀᴇᴘᴏ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ.\n\n❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ [{dispatcher.bot.first_name}](t.me/{dispatcher.bot.username}) """,
+        caption=f"""𖣐 ʜᴇʏ {message.from_user.mention()}, ᴡᴇʟᴄᴏᴍᴇ ʙᴀʙʏ ♥︎\n\n⬤ ɪғ ʏᴏᴜ ᴡᴀɴᴛ [{dispatcher.bot.first_name}](t.me/{dispatcher.bot.username}) ʙᴏᴛ ʀᴇᴘᴏ, ᴛʜᴇɴ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʀᴇᴘᴏ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ᴍʏ sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ.\n\n𖣐 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ [{dispatcher.bot.first_name}](t.me/{dispatcher.bot.username}) """,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
