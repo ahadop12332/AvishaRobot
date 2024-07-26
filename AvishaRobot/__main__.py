@@ -357,7 +357,7 @@ def start(update: Update, context: CallbackContext):
     else:
         update.effective_message.reply_photo(
             random.choice(NYKAA),
-            caption="⬤ ๛ᴀ ᴠ ɪ s ʜ ᴀ ࿐ ɪs ᴀʟɪᴠᴇ ʙᴀʙʏ.\n\n⬤ ᴜᴘᴛɪᴍᴇ ➥ <code>{}</code>".format(
+            caption="⬤ ʟ ᴜ ᴄ ʏ • / ‹𝟹 ɪs ᴀʟɪᴠᴇ ʙᴀʙʏ.\n\n⬤ ᴜᴘᴛɪᴍᴇ ➥ <code>{}</code>".format(
                 uptime
             ),
             reply_markup=InlineKeyboardMarkup(roy),
@@ -487,7 +487,7 @@ def Avisha_about_callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "avisha_":
         uptime = get_readable_time((time.time() - StartTime))
-        query.message.edit_caption(f"*❖ ɪ ʜᴀᴠᴇ ᴍᴏsᴛ ᴘᴏᴡᴇʀғᴜʟʟ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ + ᴍᴜsɪᴄ ʙᴏᴛ ғᴇᴀᴛᴜʀᴇs.*"
+        query.message.edit_caption(f"*𖣐 ɪ ʜᴀᴠᴇ ᴍᴏsᴛ ᴘᴏᴡᴇʀғᴜʟʟ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ + ᴍᴜsɪᴄ ʙᴏᴛ ғᴇᴀᴛᴜʀᴇs.*"
             "\n\n● ᴡʀɪᴛᴛᴇɴ ɪɴ ᴩʏᴛʜᴏɴ ᴡɪᴛʜ sǫʟᴀʟᴄʜᴇᴍʏ ᴀɴᴅ ᴍᴏɴɢᴏᴅʙ ᴀs ᴅᴀᴛᴀʙᴀsᴇ."
             f"\n\n● ᴛᴏᴛᴀʟ ᴜsᴇʀs ➥ {sql.num_users()}"
             f"\n● ᴛᴏᴛᴀʟ ᴄʜᴀᴛs ➥ {sql.num_chats()}"
@@ -509,7 +509,7 @@ def Avisha_about_callback(update: Update, context: CallbackContext):
             ),
             )
     elif query.data == "avisha_support":
-        query.message.edit_caption("**❖ ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ɢɪᴠᴇɴ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ ғᴏʀ ʙᴏᴛ ᴜᴘᴅᴀᴛᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ.**"
+        query.message.edit_caption("**𖣐 ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ɢɪᴠᴇɴ ʙᴜᴛᴛᴏɴ ᴛᴏ ᴊᴏɪɴ ᴏᴜʀ ᴜᴘᴅᴀᴛᴇ ᴄʜᴀɴɴᴇʟ ғᴏʀ ʙᴏᴛ ᴜᴘᴅᴀᴛᴇ ɪɴғᴏʀᴍᴀᴛɪᴏɴ.**"
             f"\n\n● ɪғ ᴀɴʏ ʙᴜɢ ɪɴ {dispatcher.bot.first_name}, ᴩʟᴇᴀsᴇ ʀᴇᴩᴏʀᴛ ɪᴛ ᴀᴛ sᴜᴩᴩᴏʀᴛ ᴄʜᴀᴛ.",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
@@ -534,7 +534,7 @@ def AvishaRobot_Main_Callback(update: Update, context: CallbackContext):
     query = update.callback_query
     if query.data == "Main_help":
         query.message.edit_caption(f"""
- ❖ ʜᴇʀᴇ ɪꜱ ʜᴇʟᴘ ᴍᴇɴᴜ ꜰᴏʀ {BOT_NAME}
+ 𖣐 ʜᴇʀᴇ ɪꜱ ʜᴇʟᴘ ᴍᴇɴᴜ ꜰᴏʀ {BOT_NAME}
 """,
             parse_mode=ParseMode.MARKDOWN,
             
@@ -902,7 +902,7 @@ def get_help(update: Update, context: CallbackContext):
         if len(args) >= 2 and any(args[1].lower() == x for x in HELPABLE):
             module = args[1].lower()
             update.effective_message.reply_photo(random.choice(ABHI),
-                f"❖ ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ ɪɴ ᴘᴍ ᴛᴏ ɢᴇᴛ ʜᴇʟᴘ ᴏғ {module.capitalize()}",
+                f"𖣐 ᴄᴏɴᴛᴀᴄᴛ ᴍᴇ ɪɴ ᴘᴍ ᴛᴏ ɢᴇᴛ ʜᴇʟᴘ ᴏғ {module.capitalize()}",
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
@@ -917,7 +917,7 @@ def get_help(update: Update, context: CallbackContext):
                 ),
             )
             return
-        update.effective_message.reply_photo(random.choice(NYKAA),"❖ ᴡʜᴇʀᴇ ᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴏᴘᴇɴ ᴛʜᴇ sᴇᴛᴛɪɴɢs ᴍᴇɴᴜ?.",
+        update.effective_message.reply_photo(random.choice(NYKAA),"𖣐 ᴡʜᴇʀᴇ ᴅᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴏᴘᴇɴ ᴛʜᴇ sᴇᴛᴛɪɴɢs ᴍᴇɴᴜ?.",
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
@@ -1011,7 +1011,7 @@ def settings_button(update: Update, context: CallbackContext):
             chat_id = mod_match.group(1)
             module = mod_match.group(2)
             chat = bot.get_chat(chat_id)
-            text = "❖ *{}* ʜᴀs ᴛʜᴇ ғᴏʟʟᴏᴡɪɴɢ sᴇᴛᴛɪɴɢs ғᴏʀ ᴛʜᴇ ➥ *{}* \n\n".format(
+            text = "𖣐 *{}* ʜᴀs ᴛʜᴇ ғᴏʟʟᴏᴡɪɴɢ sᴇᴛᴛɪɴɢs ғᴏʀ ᴛʜᴇ ➥ *{}* \n\n".format(
                 escape_markdown(chat.title), CHAT_SETTINGS[module].__mod_name__
             ) + CHAT_SETTINGS[module].__chat_settings__(chat_id, user.id)
             query.message.reply_text(text,
@@ -1099,7 +1099,7 @@ def get_settings(update: Update, context: CallbackContext):
                 ),
             )
         else:
-            text = "❖ ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴇᴛᴛɪɴɢs"
+            text = "𖣐 ᴄʟɪᴄᴋ ʜᴇʀᴇ ᴛᴏ ᴄʜᴇᴄᴋ ʏᴏᴜʀ sᴇᴛᴛɪɴɢs"
 
     else:
         send_settings(chat.id, user.id, True)
@@ -1177,7 +1177,7 @@ def main():
                 f"@{SUPPORT_CHAT}",
                 photo=f"{START_IMG}",
                 caption=f"""
-❖ㅤ{BOT_NAME} ɪs ᴀʟɪᴠᴇ ʙᴀʙʏ ❖
+𖣐ㅤ{BOT_NAME} ɪs ᴀʟɪᴠᴇ ʙᴀʙʏ 𖣐
      ━━━━━━━━ ⊱◈◈◈⊰ ━━━━━━━━
      
 **● ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ ➥** `{y()}`
@@ -1185,7 +1185,7 @@ def main():
 **● ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ ➥** `{tlhver}`
 **● ᴩʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ ➥** `{pyrover}`
 
-**❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ [๛ᴀ ᴠ ɪ s ʜ ᴀ ࿐](https://t.me/roy_editx)**
+**𖣐 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ [ʟ ᴜ ᴄ ʏ • / ‹𝟹](https://t.me/itsmeluccii)**
      ━━━━━━━━ ⊱◈◈◈⊰ ━━━━━━━━
 """,reply_markup=x,
                 parse_mode=ParseMode.MARKDOWN,
