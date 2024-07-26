@@ -14,7 +14,7 @@ EVAA = [
 @app.on_message(filters.command("blackpink"))
 async def blackpink(_, message):
     text = message.text[len("/blackpink ") :]
-    bp(f"{text}").save(f"blackpink_{message.from_user.id}.png", caption=f"❖ ʙʟᴀᴄᴋᴘɪɴᴋ ʙʏ ➥ ๛ᴀ ᴠ ɪ s ʜ ᴀ ࿐", reply_markup=InlineKeyboardMarkup(EVAA),)
-    await message.reply_photo(f"blackpink_{message.from_user.id}.png", caption=f"❖ ʙʟᴀᴄᴋᴘɪɴᴋ ʙʏ ➥ ๛ᴀ ᴠ ɪ s ʜ ᴀ ࿐", reply_markup=InlineKeyboardMarkup(EVAA),)
+    bp(f"{text}").save(f"blackpink_{message.from_user.id}.png", caption=f"𖣐 ʙʟᴀᴄᴋᴘɪɴᴋ ʙʏ ➥ ʟ ᴜ ᴄ ʏ • / ‹𝟹", reply_markup=InlineKeyboardMarkup(EVAA),)
+    await message.reply_photo(f"blackpink_{message.from_user.id}.png", caption=f"𖣐 ʙʟᴀᴄᴋᴘɪɴᴋ ʙʏ ➥ ʟ ᴜ ᴄ ʏ • / ‹𝟹", reply_markup=InlineKeyboardMarkup(EVAA),)
     os.remove(f"blackpink_{message.from_user.id}.png")
   
