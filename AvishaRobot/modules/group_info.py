@@ -11,7 +11,7 @@ EVAA = [
 @app.on_message(filters.command("groupinfo", prefixes="/"))
 async def get_group_status(_, message: Message):
     if len(message.command) != 2:
-        await message.reply("❖ Please provide a group username.● Example ➥ `/groupinfo YourGroupUsername`")
+        await message.reply("𖣐 Please provide a group username.● Example ➥ `/groupinfo YourGroupUsername`")
         return
     
     group_username = message.command[1]
@@ -32,7 +32,7 @@ async def get_group_status(_, message: Message):
         f"● ᴛᴏᴛᴀʟ ᴍᴇᴍʙᴇʀs ➥ {total_members}\n"
         f"● ᴜsᴇʀɴᴀᴍᴇ ➥ @{group_username}\n"
         f"● ᴅᴇsᴄʀɪᴘᴛɪᴏɴ ➥ \n{group_description or 'N/A'}\n\n"
-        f"❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ ๛ᴀ ᴠ ɪ s ʜ ᴀ ࿐"
+        f"𖣐 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ ʟ ᴜ ᴄ ʏ • / ‹𝟹"
     )
     
     await message.reply((response_text),reply_markup=InlineKeyboardMarkup(EVAA),)
@@ -51,7 +51,7 @@ def group_status(client, message):
                   f"● ᴛʏᴘᴇ ➥ {chat.type}\n"
                   
     if chat.username:  # Not all groups have a username
-        status_text += f"● ᴜsᴇʀɴᴀᴍᴇ ➥ @{chat.username}\n\n❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ ๛ᴀ ᴠ ɪ s ʜ ᴀ ࿐"
+        status_text += f"● ᴜsᴇʀɴᴀᴍᴇ ➥ @{chat.username}\n\n𖣐 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ ʟ ᴜ ᴄ ʏ • / ‹𝟹"
     else:
         status_text += "Username: None"
 
