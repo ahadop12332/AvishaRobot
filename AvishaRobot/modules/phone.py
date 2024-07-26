@@ -32,7 +32,7 @@ def phone(update, context):
     carrier = obj["carrier"]
     line_type = obj["line_type"]
     validornot = obj["valid"]
-    bb = "❖ ᴘʜᴏɴᴇ ɴᴜᴍʙᴇʀ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ⏤͟͟͞͞★"
+    bb = "𖣐 ᴘʜᴏɴᴇ ɴᴜᴍʙᴇʀ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ⏤͟͟͞͞★"
     aa = "● ᴠᴀʟɪᴅ ➥  " + str(validornot)
     a = "● ᴘʜᴏɴᴇ ɴᴜᴍʙᴇʀ ➥  " + str(number)
     b = "● ᴄᴏᴜɴᴛʀʏ ➥  " + str(country_code)
