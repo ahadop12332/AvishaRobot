@@ -127,7 +127,7 @@ async def greet_group(_, member: ChatMemberUpdated):
 ● ᴜsᴇʀ ɪᴅ ➥ {user.id}
 ● ᴜsᴇʀɴᴀᴍᴇ ➥ @{user.username}
 
-➥ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ [ɴ ᴏ ᴠ ᴧ ♡゙](https://t.me/PhoenixXsupport)**
+𖣐 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ [ɴ ᴏ ᴠ ᴧ ♡゙](https://t.me/PhoenixXsupport)**
 ▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰
 """,
             reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton (f"ᴠɪᴇᴡ ᴜsᴇʀ", url=f"https://t.me/{user.username}")]])
