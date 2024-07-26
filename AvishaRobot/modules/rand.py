@@ -28,7 +28,7 @@ def generate_info(client, message):
 
     # Create a message with the fake data
     info_message = (
-        f"❖ **ʀᴀɴᴅᴏᴍ ᴜsᴇʀ ᴀᴅᴅʀᴇss ᴅᴇᴛᴀɪʟs ❖**\n\n"
+        f"𖣐 **ʀᴀɴᴅᴏᴍ ᴜsᴇʀ ᴀᴅᴅʀᴇss ᴅᴇᴛᴀɪʟs 𖣐**\n\n"
         
         f"**● ғᴜʟʟ ɴᴀᴍᴇ ➥** {name}\n"
         
