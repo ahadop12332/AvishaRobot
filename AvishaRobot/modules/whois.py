@@ -31,7 +31,7 @@ infotext = (
     "● ʟᴀsᴛ ɴᴀᴍᴇ ➥ `{last_name}`\n"
     "● ᴜsᴇʀɴᴀᴍᴇ ➥ `@{username}`\n"
     "● ʟᴀsᴛ sᴇᴇɴ ➥ `{last_online}`\n\n"
-    "❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ [๛ᴀ ᴠ ɪ s ʜ ᴀ ࿐](https://t.me/avishaxbot)"
+    "❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ [ɴ ᴏ ᴠ ᴧ ♡゙](https://t.me/nova_xprobot)"
 )
 
 
