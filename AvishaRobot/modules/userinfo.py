@@ -332,7 +332,7 @@ def info(update: Update, context: CallbackContext):
                                 "ʜᴇᴀʟᴛʜ", url="https://t.me/nova_updats/23"
                             ),
                             InlineKeyboardButton(
-                                "ᴅɪsᴀsᴛᴇʀ", url="https://t.me/RoY_Editx/881"
+                                "ᴅɪsᴀsᴛᴇʀ", url="https://t.me/nova_updats/18"
                             ),
                         ],
                     ]
