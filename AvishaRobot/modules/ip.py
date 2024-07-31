@@ -26,7 +26,7 @@ def get_ip_info(ip_address):
         response = requests.get(api_url)
         if response.status_code == 200:
             data = response.json()
-            info = f"❖ ɪᴘ ➥ {data['ip']}\n● ᴄᴏᴜɴᴛʀʏ ➥ {data['country']}\n● ᴄɪᴛʏ ➥ {data['city']}\n❖ ɪsᴘ ➥ {data['isp']}"
+            info = f"𖣐 ɪᴘ ➥ {data['ip']}\n● ᴄᴏᴜɴᴛʀʏ ➥ {data['country']}\n● ᴄɪᴛʏ ➥ {data['city']}\n𖣐 ɪsᴘ ➥ {data['isp']}"
             return info
     except Exception as e:
         print(f"⬤ Error fetching IP information ➥ {e}")
