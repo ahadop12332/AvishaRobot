@@ -211,9 +211,9 @@ hack_you = [
     "`Hacking... 20%\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `\n\n\n  TERMINAL:\nDownloading Bruteforce-Telegram-0.1.tar.gz (9.3 kB)\nCollecting Data Package\n  Downloading Telegram-Data-Sniffer-7.1.1-py2.py3-none-any.whl (82 kB)\nBuilding wheel for Tg-Bruteforcing (setup.py): finished with status 'done'",
     "`Hacking... 36%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `\n\n\n  TERMINAL:\nDownloading Bruteforce-Telegram-0.1.tar.gz (9.3 kB)\nCollecting Data Package\n  Downloading Telegram-Data-Sniffer-7.1.1-py2.py3-none-any.whl (82 kB)\nBuilding wheel for Tg-Bruteforcing (setup.py): finished with status 'done'\nCreated wheel for telegram: filename=Telegram-Data-Sniffer-0.0.1-py3-none-any.whl size=1306 sha256=cb224caad7fe01a6649188c62303cd4697c1869fa12d280570bb6ac6a88e6b7e",
     "`Hacking... 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `\n\n\n  TERMINAL:\nDownloading Bruteforce-Telegram-0.1.tar.gz (9.3 kB)\nCollecting Data Package\n  Downloading Telegram-Data-Sniffer-7.1.1-py2.py3-none-any.whl (82 kB)\nBuilding wheel for Tg-Bruteforcing (setup.py): finished with status 'done'\nCreated wheel for telegram: filename=Telegram-Data-Sniffer-0.0.1-py3-none-any.whl size=1306 sha256=cb224caad7fe01a6649188c62303cd4697c1869fa12d280570bb6ac6a88e6b7e\n  Stored in directory: /app/.cache/pip/wheels/a2/9f/b5/650dd4d533f0a17ca30cc11120b176643d27e0e1f5c9876b5b",
-    "`Hacking... 84%\n█████████████████████▒▒▒▒ `\n\n\n  TERMINAL:\nDownloading Bruteforce-Telegram-0.1.tar.gz (9.3 kB)\nCollecting Data Package\n  Downloading Telegram-Data-Sniffer-7.1.1-py2.py3-none-any.whl (82 kB)\nBuilding wheel for Tg-Bruteforcing (setup.py): finished with status 'done'\nCreated wheel for telegram: filename=Telegram-Data-Sniffer-0.0.1-py3-none-any.whl size=1306 sha256=cb224caad7fe01a6649188c62303cd4697c1869fa12d280570bb6ac6a88e6b7e\n  Stored in directory: /app/.cache/pip/wheels/a2/9f/b5/650dd4d533f0a17ca30cc11120b176643d27e0e1f5c9876b5b\n\n❖ sᴜᴄᴄᴇssғᴜʟʟʏ ʜᴀᴄᴋᴇᴅ ᴛᴇʟᴇɢʀᴀᴍ sᴇʀᴠᴇʀ ᴅᴀᴛᴀʙᴀsᴇ.",
-    "`Hacking... 100%\n█████████HACKED███████████ `\n\n\n  TERMINAL:\nDownloading Bruteforce-Telegram-0.1.tar.gz (9.3 kB)\nCollecting Data Package\n  Downloading Telegram-Data-Sniffer-7.1.1-py2.py3-none-any.whl (82 kB)\nBuilding wheel for Tg-Bruteforcing (setup.py): finished with status 'done'\nCreated wheel for telegram: filename=Telegram-Data-Sniffer-0.0.1-py3-none-any.whl size=1306 sha256=cb224caad7fe01a6649188c62303cd4697c1869fa12d280570bb6ac6a88e6b7e\n  Stored in directory: /app/.cache/pip/wheels/a2/9f/b5/650dd4d533f0a17ca30cc11120b176643d27e0e1f5c9876b5b\n\n❖ sᴜᴄᴄᴇssғᴜʟʟʏ ʜᴀᴄᴋᴇᴅ ᴛᴇʟᴇɢʀᴀᴍ sᴇʀᴠᴇʀ ᴅᴀᴛᴀʙᴀsᴇ.\n\n\n⬤ Output: Generating.....",
-    "`❖ 𝗧𝗔𝗥𝗚𝗘𝗧 𝗔𝗖𝗖𝗢𝗨𝗡𝗧 𝗛𝗔𝗖𝗞𝗘𝗗\n\n⬤ ᴘᴀʏ 800620$ ᴛᴏ `ᴏʀ ʏᴏᴜʀ ɢɪʀʟғʀɪᴇɴᴅ ɴᴜᴍʙᴇʀ ᴛᴏ ᴍʏ ᴏᴡɴᴇʀ `ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴛʜɪs ʜᴀᴄᴋ...`\n\n⚫ 𝗧𝗘𝗥𝗠𝗜𝗡𝗔𝗟 ➥\nDownloading Bruteforce-Telegram-0.1.tar.gz (9.3 kB)\nCollecting Data Package\n  Downloading Telegram-Data-Sniffer-7.1.1-py2.py3-none-any.whl (82 kB)\nBuilding wheel for Tg-Bruteforcing (setup.py): finished with status 'done'\nCreated wheel for telegram: filename=Telegram-Data-Sniffer-0.0.1-py3-none-any.whl size=1306 sha256=cb224caad7fe01a6649188c62303cd4697c1869fa12d280570bb6ac6a88e6b7e\n  Stored in directory: /app/.cache/pip/wheels/a2/9f/b5/650dd4d533f0a17ca30cc11120b176643d27e0e1f5c9876b5b\n\n⬤ sᴜᴄᴄᴇssғᴜʟʟʏ ʜᴀᴄᴋᴇᴅ ᴛᴇʟᴇɢʀᴀᴍ sᴇʀᴠᴇʀ ᴅᴀᴛᴀʙᴀsᴇ.\n❖ ᴄᴏɴᴛᴀᴄᴛ  ᴏᴡɴᴇʀ ᴛᴏ ʀᴇᴍᴏᴠᴇ ʜᴀᴄᴋ @itsmeluccii\n\n\n⬤ ᴏᴜᴛᴘᴜᴛ sᴜᴄᴄᴇssғᴜʟʟ.",
+    "`Hacking... 84%\n█████████████████████▒▒▒▒ `\n\n\n  TERMINAL:\nDownloading Bruteforce-Telegram-0.1.tar.gz (9.3 kB)\nCollecting Data Package\n  Downloading Telegram-Data-Sniffer-7.1.1-py2.py3-none-any.whl (82 kB)\nBuilding wheel for Tg-Bruteforcing (setup.py): finished with status 'done'\nCreated wheel for telegram: filename=Telegram-Data-Sniffer-0.0.1-py3-none-any.whl size=1306 sha256=cb224caad7fe01a6649188c62303cd4697c1869fa12d280570bb6ac6a88e6b7e\n  Stored in directory: /app/.cache/pip/wheels/a2/9f/b5/650dd4d533f0a17ca30cc11120b176643d27e0e1f5c9876b5b\n\n𖣐 sᴜᴄᴄᴇssғᴜʟʟʏ ʜᴀᴄᴋᴇᴅ ᴛᴇʟᴇɢʀᴀᴍ sᴇʀᴠᴇʀ ᴅᴀᴛᴀʙᴀsᴇ.",
+    "`Hacking... 100%\n█████████HACKED███████████ `\n\n\n  TERMINAL:\nDownloading Bruteforce-Telegram-0.1.tar.gz (9.3 kB)\nCollecting Data Package\n  Downloading Telegram-Data-Sniffer-7.1.1-py2.py3-none-any.whl (82 kB)\nBuilding wheel for Tg-Bruteforcing (setup.py): finished with status 'done'\nCreated wheel for telegram: filename=Telegram-Data-Sniffer-0.0.1-py3-none-any.whl size=1306 sha256=cb224caad7fe01a6649188c62303cd4697c1869fa12d280570bb6ac6a88e6b7e\n  Stored in directory: /app/.cache/pip/wheels/a2/9f/b5/650dd4d533f0a17ca30cc11120b176643d27e0e1f5c9876b5b\n\n𖣐 sᴜᴄᴄᴇssғᴜʟʟʏ ʜᴀᴄᴋᴇᴅ ᴛᴇʟᴇɢʀᴀᴍ sᴇʀᴠᴇʀ ᴅᴀᴛᴀʙᴀsᴇ.\n\n\n⬤ Output: Generating.....",
+    "`𖣐 𝗧𝗔𝗥𝗚𝗘𝗧 𝗔𝗖𝗖𝗢𝗨𝗡𝗧 𝗛𝗔𝗖𝗞𝗘𝗗\n\n⬤ ᴘᴀʏ 800620$ ᴛᴏ `ᴏʀ ʏᴏᴜʀ ɢɪʀʟғʀɪᴇɴᴅ ɴᴜᴍʙᴇʀ ᴛᴏ ᴍʏ ᴏᴡɴᴇʀ `ᴛᴏ ʀᴇᴍᴏᴠᴇ ᴛʜɪs ʜᴀᴄᴋ...`\n\n⚫ 𝗧𝗘𝗥𝗠𝗜𝗡𝗔𝗟 ➥\nDownloading Bruteforce-Telegram-0.1.tar.gz (9.3 kB)\nCollecting Data Package\n  Downloading Telegram-Data-Sniffer-7.1.1-py2.py3-none-any.whl (82 kB)\nBuilding wheel for Tg-Bruteforcing (setup.py): finished with status 'done'\nCreated wheel for telegram: filename=Telegram-Data-Sniffer-0.0.1-py3-none-any.whl size=1306 sha256=cb224caad7fe01a6649188c62303cd4697c1869fa12d280570bb6ac6a88e6b7e\n  Stored in directory: /app/.cache/pip/wheels/a2/9f/b5/650dd4d533f0a17ca30cc11120b176643d27e0e1f5c9876b5b\n\n⬤ sᴜᴄᴄᴇssғᴜʟʟʏ ʜᴀᴄᴋᴇᴅ ᴛᴇʟᴇɢʀᴀᴍ sᴇʀᴠᴇʀ ᴅᴀᴛᴀʙᴀsᴇ.\n❖ ᴄᴏɴᴛᴀᴄᴛ  ᴏᴡɴᴇʀ ᴛᴏ ʀᴇᴍᴏᴠᴇ ʜᴀᴄᴋ @itsmeluccii\n\n\n⬤ ᴏᴜᴛᴘᴜᴛ sᴜᴄᴄᴇssғᴜʟʟ.",
 ]
 
 
@@ -324,7 +324,7 @@ def brainanimation(update: Update, context: CallbackContext):
     for x in range(EDIT_TIMES):
         msg.edit_text(brain_chain[x % 14])
         time.sleep(EDIT_SLEEP)
-    msg.edit_text("❖ ʏᴏᴜ ᴘᴜᴛ ʙʀᴀɪɴ ɪɴ ᴅᴜsᴛʙɪɴ 🧠")
+    msg.edit_text("𖣐 ʏᴏᴜ ᴘᴜᴛ ʙʀᴀɪɴ ɪɴ ᴅᴜsᴛʙɪɴ 🧠")
 
 
 @user_admin
@@ -391,19 +391,19 @@ def bombs(update: Update, context: CallbackContext):
     for x in range(EDIT_TIMES):
         msg.edit_text(bomb_ettu[x % 9])
         time.sleep(EDIT_SLEEP)
-    msg.edit_text("❖ ʀɪᴘ ᴘʟᴏx...")
+    msg.edit_text("𖣐 ʀɪᴘ ᴘʟᴏx...")
 
 
 @user_admin
 @run_async
 def hack(update: Update, context: CallbackContext):
     bot, args = context.bot, context.args
-    msg = update.effective_message.reply_text("❖ ᴛᴀʀɢᴇᴛ sᴇʟᴇᴄᴛᴇᴅ")
+    msg = update.effective_message.reply_text("𖣐 ᴛᴀʀɢᴇᴛ sᴇʟᴇᴄᴛᴇᴅ")
     for x in range(EDIT_TIMES):
         msg.edit_text(hack_you[x % 18])
         time.sleep(EDIT_SLEEP)
     msg.edit_text(
-        "❖ ᴘᴅғ ᴄʀᴇᴀᴛᴇᴅ ᴄʟɪᴄᴋ ʟɪɴᴋ ʙᴇʟᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴅᴀᴛᴀ.\n\n● ᴅᴏɴ'ᴛ ᴡᴏʀʀʏ ᴏɴʟʏ ɪ ᴄᴀɴ ᴏᴘᴇɴ ᴛʜɪs.. ɪғ ᴜ ᴅᴏɴ'ᴛ ʙᴇʟɪᴇᴠᴇ ᴛʀʏ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ.\n\n❖ https://drive.google.com/file/d/1hPUfr27UtU0XjtC20lXjY9G3D9jR5imj/view?usp=sharing"
+        "𖣐 ᴘᴅғ ᴄʀᴇᴀᴛᴇᴅ ᴄʟɪᴄᴋ ʟɪɴᴋ ʙᴇʟᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ ᴅᴀᴛᴀ.\n\n● ᴅᴏɴ'ᴛ ᴡᴏʀʀʏ ᴏɴʟʏ ɪ ᴄᴀɴ ᴏᴘᴇɴ ᴛʜɪs.. ɪғ ᴜ ᴅᴏɴ'ᴛ ʙᴇʟɪᴇᴠᴇ ᴛʀʏ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ.\n\n𖣐 https://drive.google.com/file/d/1hPUfr27UtU0XjtC20lXjY9G3D9jR5imj/view?usp=sharing"
     )
 
 
@@ -415,7 +415,7 @@ def love(update: Update, context: CallbackContext):
     for x in range(EDIT_TIMES):
         msg.edit_text(love_siren[x % 35])
         time.sleep(EDIT_SLEEP)
-    msg.edit_text("❖ ᴛʀᴜᴇ ʟᴏᴠᴇ 💞")
+    msg.edit_text("𖣐 ᴛʀᴜᴇ ʟᴏᴠᴇ 💞")
 
 
 @user_admin
@@ -426,7 +426,7 @@ def heart(update: Update, context: CallbackContext):
     for x in range(EDIT_TIMES):
         msg.edit_text(heart_siren[x % 10])
         time.sleep(EDIT_SLEEP)
-    msg.edit_text("❖ ᴄᴏʟᴏᴜʀғᴜʟʟ ʜᴇᴀʀᴛ ♥︎")
+    msg.edit_text("𖣐 ᴄᴏʟᴏᴜʀғᴜʟʟ ʜᴇᴀʀᴛ ♥︎")
 
 
 @user_admin
@@ -437,7 +437,7 @@ def sexy(update: Update, context: CallbackContext):
     for x in range(EDIT_TIMES):
         msg.edit_text(sexy_siren[x % 14])
         time.sleep(EDIT_SLEEP)
-    msg.edit_text("❖ ᴍʏ ɢғ ɪs sᴏ sᴇxʏ...♥︎")
+    msg.edit_text("𖣐 ᴍʏ ɢғ ɪs sᴏ sᴇxʏ...♥︎")
   
 
 @user_admin
