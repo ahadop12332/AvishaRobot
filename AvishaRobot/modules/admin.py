@@ -158,7 +158,7 @@ def setchat_title(update: Update, context: CallbackContext):
     try:
         context.bot.set_chat_title(int(chat.id), str(title))
         msg.reply_text(
-            f"❖ sᴜᴄᴄᴇssғᴜʟʟʏ sᴇᴛ ➥ <b>{title}</b> ᴀs ɴᴇᴡ ᴄʜᴀᴛ ᴛɪᴛʟᴇ !",
+            f"𖣐 sᴜᴄᴄᴇssғᴜʟʟʏ sᴇᴛ ➥ <b>{title}</b> ᴀs ɴᴇᴡ ᴄʜᴀᴛ ᴛɪᴛʟᴇ !",
             parse_mode=ParseMode.HTML,
         )
     except BadRequest as excp:
@@ -237,7 +237,7 @@ def promote(update: Update, context: CallbackContext) -> str:
 
     bot.sendMessage(
         chat.id,
-        f"<b>❖ ᴩʀᴏᴍᴏᴛɪɴɢ ᴀ ᴜsᴇʀ ɪɴ</b> ➥ {chat.title}\n\n● ᴩʀᴏᴍᴏᴛᴇᴅ ᴜsᴇʀ ➥ {mention_html(user_member.user.id, user_member.user.first_name)}\n● ᴩʀᴏᴍᴏᴛᴇʀ ʙʏ ➥ {mention_html(user.id, user.first_name)}",
+        f"<b>𖣐 ᴩʀᴏᴍᴏᴛɪɴɢ ᴀ ᴜsᴇʀ ɪɴ</b> ➥ {chat.title}\n\n● ᴩʀᴏᴍᴏᴛᴇᴅ ᴜsᴇʀ ➥ {mention_html(user_member.user.id, user_member.user.first_name)}\n● ᴩʀᴏᴍᴏᴛᴇʀ ʙʏ ➥ {mention_html(user.id, user.first_name)}",
         parse_mode=ParseMode.HTML,
     )
 
@@ -318,7 +318,7 @@ def lowpromote(update: Update, context: CallbackContext) -> str:
 
     bot.sendMessage(
         chat.id,
-        f"<b>❖ ʟᴏᴡ ᴩʀᴏᴍᴏᴛɪɴɢ ᴀ ᴜsᴇʀ ɪɴ </b>➥ {chat.title}\n\n<b>● ᴩʀᴏᴍᴏᴛᴇᴅ ᴜsᴇʀ ➥</b> {mention_html(user_member.user.id, user_member.user.first_name)}\n● ᴩʀᴏᴍᴏᴛᴇʀ ʙʏ ➥ {mention_html(user.id, user.first_name)}",
+        f"<b>𖣐 ʟᴏᴡ ᴩʀᴏᴍᴏᴛɪɴɢ ᴀ ᴜsᴇʀ ɪɴ </b>➥ {chat.title}\n\n<b>● ᴩʀᴏᴍᴏᴛᴇᴅ ᴜsᴇʀ ➥</b> {mention_html(user_member.user.id, user_member.user.first_name)}\n● ᴩʀᴏᴍᴏᴛᴇʀ ʙʏ ➥ {mention_html(user.id, user.first_name)}",
       parse_mode=ParseMode.HTML,
     )
 
@@ -405,7 +405,7 @@ def fullpromote(update: Update, context: CallbackContext) -> str:
 
     bot.sendMessage(
         chat.id,
-        f"❖ ғᴜʟʟᴩʀᴏᴍᴏᴛɪɴɢ ᴀ ᴜsᴇʀ ɪɴ <b>➥ {chat.title}</b>\n\n<b>● ᴘʀᴏᴍᴏᴛᴇᴅ ᴜsᴇʀ ➥ {mention_html(user_member.user.id, user_member.user.first_name)}</b>\n<b>● ᴩʀᴏᴍᴏᴛᴇʀ ʙʏ ➥ {mention_html(user.id, user.first_name)}</b>",
+        f"𖣐 ғᴜʟʟᴩʀᴏᴍᴏᴛɪɴɢ ᴀ ᴜsᴇʀ ɪɴ <b>➥ {chat.title}</b>\n\n<b>● ᴘʀᴏᴍᴏᴛᴇᴅ ᴜsᴇʀ ➥ {mention_html(user_member.user.id, user_member.user.first_name)}</b>\n<b>● ᴩʀᴏᴍᴏᴛᴇʀ ʙʏ ➥ {mention_html(user.id, user.first_name)}</b>",
       parse_mode=ParseMode.HTML,
     )
 
@@ -566,7 +566,7 @@ def set_title(update: Update, context: CallbackContext):
 
     bot.sendMessage(
         chat.id,
-        f"❖ sᴜᴄᴄᴇssғᴜʟʟʏ sᴇᴛ ᴛɪᴛʟᴇ ғᴏʀ ➥ <code>{user_member.user.first_name or user_id}</code> "
+        f"𖣐 sᴜᴄᴄᴇssғᴜʟʟʏ sᴇᴛ ᴛɪᴛʟᴇ ғᴏʀ ➥ <code>{user_member.user.first_name or user_id}</code> "
         f"ᴛᴏ <code>{html.escape(title[:16])}</code>!",
      parse_mode=ParseMode.HTML,
     )
@@ -613,7 +613,7 @@ def pin(update: Update, context: CallbackContext) -> str:
                 chat.id, prev_message.message_id, disable_notification=is_silent
             )
             msg.reply_text(
-                f"❖ sᴜᴄᴄᴇssғᴜʟʟʏ ᴩɪɴɴᴇᴅ ᴛʜᴀᴛ ᴍᴇssᴀɢᴇ.\n\n● ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ sᴇᴇ ᴛʜᴇ ᴍᴇssᴀɢᴇ.",
+                f"𖣐 sᴜᴄᴄᴇssғᴜʟʟʏ ᴩɪɴɴᴇᴅ ᴛʜᴀᴛ ᴍᴇssᴀɢᴇ.\n\n● ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟᴏᴡ ᴛᴏ sᴇᴇ ᴛʜᴇ ᴍᴇssᴀɢᴇ.",
                 reply_markup=InlineKeyboardMarkup(
                     [[InlineKeyboardButton("ᴍᴇssᴀɢᴇ", url=f"{message_link}")]]
                 ),
@@ -680,11 +680,11 @@ def unpin(update: Update, context: CallbackContext):
     if not prev_message and is_group:
         try:
             context.bot.unpinChatMessage(chat.id)
-            msg.reply_text("❖ sᴜᴄᴄᴇssғᴜʟʟʏ ᴜɴᴩɪɴɴᴇᴅ ᴛʜᴇ ʟᴀsᴛ ᴩɪɴɴᴇᴅ ᴍᴇssᴀɢᴇ.")
+            msg.reply_text("𖣐 sᴜᴄᴄᴇssғᴜʟʟʏ ᴜɴᴩɪɴɴᴇᴅ ᴛʜᴇ ʟᴀsᴛ ᴩɪɴɴᴇᴅ ᴍᴇssᴀɢᴇ.")
         except BadRequest as excp:
             if excp.message == "Message to unpin not found":
                 msg.reply_text(
-                    "❖ ɪ ᴄᴀɴ'ᴛ ᴜɴᴩɪɴ ᴛʜᴀᴛ ᴍᴇssᴀɢᴇ, ᴍᴀʏʙᴇ ᴛʜᴀᴛ ᴍᴇssᴀɢᴇ ɪs ᴛᴏᴏ ᴏʟᴅ ᴏʀ ᴍᴀʏʙᴇ sᴏᴍᴇᴏɴᴇ ᴀʟʀᴇᴀᴅʏ ᴜɴᴩɪɴɴᴇᴅ ɪᴛ."
+                    "𖣐 ɪ ᴄᴀɴ'ᴛ ᴜɴᴩɪɴ ᴛʜᴀᴛ ᴍᴇssᴀɢᴇ, ᴍᴀʏʙᴇ ᴛʜᴀᴛ ᴍᴇssᴀɢᴇ ɪs ᴛᴏᴏ ᴏʟᴅ ᴏʀ ᴍᴀʏʙᴇ sᴏᴍᴇᴏɴᴇ ᴀʟʀᴇᴀᴅʏ ᴜɴᴩɪɴɴᴇᴅ ɪᴛ."
                 )
             else:
                 raise
@@ -737,7 +737,7 @@ def pinned(update: Update, context: CallbackContext) -> str:
 
     else:
         msg.reply_text(
-            f"❖ ᴛʜᴇʀᴇ's ɴᴏ ᴩɪɴɴᴇᴅ ᴍᴇssᴀɢᴇ ɪɴ ➥ <b>{html.escape(chat.title)}!</b>",
+            f"𖣐 ᴛʜᴇʀᴇ's ɴᴏ ᴩɪɴɴᴇᴅ ᴍᴇssᴀɢᴇ ɪɴ ➥ <b>{html.escape(chat.title)}!</b>",
             parse_mode=ParseMode.HTML,
         )
 
@@ -758,11 +758,11 @@ def invite(update: Update, context: CallbackContext):
             update.effective_message.reply_text(invitelink)
         else:
             update.effective_message.reply_text(
-                "❖ ɪ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴀᴄᴄᴇss ɪɴᴠɪᴛᴇ ʟɪɴᴋs !",
+                "𖣐 ɪ ᴅᴏɴ'ᴛ ʜᴀᴠᴇ ᴩᴇʀᴍɪssɪᴏɴs ᴛᴏ ᴀᴄᴄᴇss ɪɴᴠɪᴛᴇ ʟɪɴᴋs !",
             )
     else:
         update.effective_message.reply_text(
-            "❖ ɪ ᴄᴀɴ ᴏɴʟʏ ɢɪᴠᴇ ɪɴᴠɪᴛᴇ ʟɪɴᴋs ғᴏʀ ɢʀᴏᴜᴩs ᴀɴᴅ ᴄʜᴀɴɴᴇʟs !",
+            "𖣐 ɪ ᴄᴀɴ ᴏɴʟʏ ɢɪᴠᴇ ɪɴᴠɪᴛᴇ ʟɪɴᴋs ғᴏʀ ɢʀᴏᴜᴩs ᴀɴᴅ ᴄʜᴀɴɴᴇʟs !",
         )
 
 
@@ -797,7 +797,7 @@ def adminlist(update, context):
         )
 
     administrators = bot.getChatAdministrators(chat_id)
-    text = "❖ ɢʀᴏᴜᴘ sᴛᴀғғ ➥ <b>{}</b>".format(html.escape(update.effective_chat.title))
+    text = "𖣐 ɢʀᴏᴜᴘ sᴛᴀғғ ➥ <b>{}</b>".format(html.escape(update.effective_chat.title))
 
     for admin in administrators:
         user = admin.user
@@ -867,7 +867,7 @@ def adminlist(update, context):
 
   #  text += "\n"
   #  for admin_group, value in custom_admin_list.items():
-    #    text += "\n❖ <code>{}</code>".format(admin_group)
+    #    text += "\n𖣐 <code>{}</code>".format(admin_group)
     #    for admin in value:
      #       text += "\n<code> </code>{}".format(admin)
       #  text += "\n"
@@ -885,14 +885,14 @@ async def listbots(client, message):
         ):
             botList.append(bot.user)
         lenBotList = len(botList)
-        text3 = f"❖ ʙᴏᴛ ʟɪsᴛ ➥ {message.chat.title}"
+        text3 = f"𖣐 ʙᴏᴛ ʟɪsᴛ ➥ {message.chat.title}"
         while len(botList) > 1:
             bot = botList.pop(0)
             text3 += f"⬤ @{bot.username}\n"
         else:
             bot = botList.pop(0)
             text3 += f"⬤ @{bot.username}\n\n"
-            text3 += f"❖ ᴛᴏᴛᴀʟ ɴᴜᴍʙᴇʀ ᴏғ ʙᴏᴛs ➥ {lenBotList}"
+            text3 += f"𖣐 ᴛᴏᴛᴀʟ ɴᴜᴍʙᴇʀ ᴏғ ʙᴏᴛs ➥ {lenBotList}"
             await pbot.send_message(message.chat.id, text3, buttons=button_row,)
     except FloodWait as e:
         await asyncio.sleep(e.value)
