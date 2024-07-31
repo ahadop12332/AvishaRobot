@@ -22,7 +22,7 @@ def convert_text(_, message):
         hex_representation = text_to_hex(input_text)
         decoded_text = hex_to_text(input_text)
 
-        response_text = f"● ɪɴᴘᴜᴛ ᴛᴇxᴛ ➥\n {input_text}\n\n● ʜᴇx ʀᴇᴘʀᴇsᴇɴᴛᴀᴛɪᴏɴ ➥\n {hex_representation}\n\n● ᴅᴇᴄᴏᴅᴇᴅ ᴛᴇxᴛ ➥\n {decoded_text}\n\n\n❖ ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥@{BOT_USERNAME}"
+        response_text = f"● ɪɴᴘᴜᴛ ᴛᴇxᴛ ➥\n {input_text}\n\n● ʜᴇx ʀᴇᴘʀᴇsᴇɴᴛᴀᴛɪᴏɴ ➥\n {hex_representation}\n\n● ᴅᴇᴄᴏᴅᴇᴅ ᴛᴇxᴛ ➥\n {decoded_text}\n\n\n𖣐 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥@{BOT_USERNAME}"
 
         message.reply_text(response_text)
     else:
