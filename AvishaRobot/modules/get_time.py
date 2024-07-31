@@ -43,7 +43,7 @@ def generate_time(to_find: str, findtype: List[str]) -> str:
 
     try:
         result = (
-            f"❖ ᴄᴜʀʀʀɴᴛ ᴛɪᴍᴇ ᴏғ {country_name} ⏤͟͟͞͞★\n\n"
+            f"𖣐 ᴄᴜʀʀʀɴᴛ ᴛɪᴍᴇ ᴏғ {country_name} ⏤͟͟͞͞★\n\n"
             f"● <b>ᴄᴏᴜɴᴛʀʏ ➥</b> <code>{country_name}</code>\n"
             f"● <b>ᴢᴏɴᴇ ɴᴀᴍᴇ ➥</b> <code>{country_zone}</code>\n"
             f"● <b>ᴄᴏᴜɴᴛʀʏ ᴄᴏᴅᴇ ➥</b> <code>{country_code}</code>\n"
