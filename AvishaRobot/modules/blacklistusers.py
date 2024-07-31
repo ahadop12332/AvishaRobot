@@ -50,12 +50,12 @@ def bl_user(update: Update, context: CallbackContext) -> str:
     sql.blacklist_user(user_id, reason)
     message.reply_text("⬤ ɪ sʜᴀʟʟ ɪɢɴᴏʀᴇ ᴛʜᴇ ᴇxɪsᴛᴇɴᴄᴇ ᴏғ ᴛʜɪs ᴜsᴇʀ !")
     log_message = (
-        f"❖ #ʙʟᴀᴄᴋʟɪsᴛ\n\n"
+        f"𖣐 #ʙʟᴀᴄᴋʟɪsᴛ\n\n"
         f"● <b>ᴀᴅᴍɪɴ ➥</b> {mention_html(user.id, html.escape(user.first_name))}\n"
         f"● <b>ᴜsᴇʀ ➥</b> {mention_html(target_user.id, html.escape(target_user.first_name))}"
     )
     if reason:
-        log_message += f"\n\n❖ <b>ʀᴇᴀsᴏɴ ➥</b> {reason}"
+        log_message += f"\n\n𖣐 <b>ʀᴇᴀsᴏɴ ➥</b> {reason}"
 
     return log_message
 
@@ -90,7 +90,7 @@ def unbl_user(update: Update, context: CallbackContext) -> str:
         sql.unblacklist_user(user_id)
         message.reply_text("*⬤ notices user*")
         log_message = (
-            f"❖ #ᴜɴʙʟᴀᴄᴋʟɪsᴛ\n\n"
+            f"𖣐 #ᴜɴʙʟᴀᴄᴋʟɪsᴛ\n\n"
             f"● <b>ᴀᴅᴍɪɴ ➥</b> {mention_html(user.id, html.escape(user.first_name))}\n"
             f"● <b>ᴜsᴇʀ ➥</b> {mention_html(target_user.id, html.escape(target_user.first_name))}"
         )
@@ -117,7 +117,7 @@ def bl_users(update: Update, context: CallbackContext):
         else:
             users.append(f"● {mention_html(user.id, html.escape(user.first_name))}")
 
-    message = "<b>❖ Blacklisted Users ❖</b>\n"
+    message = "<b>𖣐 Blacklisted Users 𖣐</b>\n"
     if not users:
         message += "⬤ None is being ignored as of yet."
     else:
