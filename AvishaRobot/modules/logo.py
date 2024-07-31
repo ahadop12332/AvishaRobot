@@ -479,13 +479,13 @@ async def lego(event):
         await telethn.send_file(
             event.chat_id,
             file=fname,
-            caption=f"""❖ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ➥ {BOT_NAME}""",buttons=button_row
+            caption=f"""𖣐 ᴄʀᴇᴀᴛᴇᴅ ʙʏ ➥ {BOT_NAME}""",buttons=button_row
 )
         await pesan.delete()
         if os.path.exists(fname):
             os.remove(fname)
     except Exception as e:
-        await event.reply(f"❖ ᴇʀʀᴏʀ {e}, ʀᴇᴩᴏʀᴛ ᴛʜɪs ᴀᴛ @{SUPPORT_CHAT} ")
+        await event.reply(f"𖣐 ᴇʀʀᴏʀ {e}, ʀᴇᴩᴏʀᴛ ᴛʜɪs ᴀᴛ @{SUPPORT_CHAT} ")
 
 
 __mod_name__ = "ʟᴏɢᴏ"
