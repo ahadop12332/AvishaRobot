@@ -1709,7 +1709,7 @@ async def lego(event):
  else:
 
     if not quew:
-       await event.reply('❖ `ᴘʟᴇᴀꜱᴇ ᴀᴅᴅ ᴛᴇxᴛ ᴛᴏ ᴛʜᴇ ɪᴍᴀɢᴇ ʙᴀʙʏ.`')
+       await event.reply('𖣐 `ᴘʟᴇᴀꜱᴇ ᴀᴅᴅ ᴛᴇxᴛ ᴛᴏ ᴛʜᴇ ɪᴍᴀɢᴇ ʙᴀʙʏ.`')
        return
     else:
        pass
@@ -1735,12 +1735,12 @@ async def lego(event):
     draw.text((x, y), text, font=font, fill="white", stroke_width=1, stroke_fill="black")
     fname="avisha.png"
     img.save(fname, "png")
-    await tbot.send_file(event.chat_id, file=fname, caption=f"❖ ʟᴏɢᴏ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ➥ [{BOT_NAME}](https://t.me/{BOT_USERNAME})",buttons=button_row)         
+    await tbot.send_file(event.chat_id, file=fname, caption=f"𖣐 ʟᴏɢᴏ ᴄʀᴇᴀᴛᴇᴅ ʙʏ ➥ [{BOT_NAME}](https://t.me/{BOT_USERNAME})",buttons=button_row)         
     await pesan.delete()
     if os.path.exists(fname):
             os.remove(fname)
  except Exception as e:
-    await event.reply(f'❖ ᴇʀʀᴏʀ, ʀᴇᴘᴏʀᴛ ᴛᴏ ➥ @{SUPPORT_CHAT} ʙᴀʙʏ.')
+    await event.reply(f'𖣐 ᴇʀʀᴏʀ, ʀᴇᴘᴏʀᴛ ᴛᴏ ➥ @{SUPPORT_CHAT} ʙᴀʙʏ.')
      
 ############
 ############
