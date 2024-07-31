@@ -11,7 +11,7 @@ from AvishaRobot.modules.helper_funcs.chat_status import user_admin, user_admin_
 def start_attendance(update, context):
     if ('flag' in context.chat_data) and (context.chat_data['flag'] == 1):
         update.message.reply_text(
-            "❖ ᴘʟᴇᴀꜱᴇ ᴄʟᴏꜱᴇ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ ꜰɪʀꜱᴛ ʙᴀʙʏ.",
+            "𖣐 ᴘʟᴇᴀꜱᴇ ᴄʟᴏꜱᴇ ᴛʜᴇ ᴄᴜʀʀᴇɴᴛ ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ ꜰɪʀꜱᴛ ʙᴀʙʏ.",
         )
     elif ('flag' not in context.chat_data) or (context.chat_data['flag'] == 0):
         context.chat_data['flag'] = 1
@@ -33,7 +33,7 @@ def start_attendance(update, context):
         ]
         reply_markup = InlineKeyboardMarkup(keyboard)
         context.chat_data['message'] = update.message.reply_text(
-            "❖ ᴘʟᴇᴀꜱᴇ ᴍᴀʀᴋ ʏᴏᴜʀ ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ ʙᴀʙʏ.", reply_markup=reply_markup,
+            "𖣐 ᴘʟᴇᴀꜱᴇ ᴍᴀʀᴋ ʏᴏᴜʀ ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ ʙᴀʙʏ.", reply_markup=reply_markup,
         )
 
 
@@ -48,13 +48,13 @@ def mark_attendance(update, context):
         ] = f'{escape_markdown(update.effective_user.full_name)}'
         context.bot.answer_callback_query(
             callback_query_id=query.id,
-            text="❖ ʏᴏᴜʀ ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ ʜᴀꜱ ʙᴇᴇɴ ᴍᴀʀᴋᴇᴅ ʙᴀʙʏ.",
+            text="𖣐 ʏᴏᴜʀ ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ ʜᴀꜱ ʙᴇᴇɴ ᴍᴀʀᴋᴇᴅ ʙᴀʙʏ.",
             show_alert=True,
         )
     else:
         context.bot.answer_callback_query(
             callback_query_id=query.id,
-            text="❖ ʏᴏᴜʀ ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ ɪꜱ ᴀʟʀᴇᴀᴅʏ ᴍᴀʀᴋᴇᴅ ʙᴀʙʏ.",
+            text="𖣐 ʏᴏᴜʀ ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ ɪꜱ ᴀʟʀᴇᴀᴅʏ ᴍᴀʀᴋᴇᴅ ʙᴀʙʏ.",
             show_alert=True,
         )
     query.answer()
@@ -72,9 +72,9 @@ def end_attendance(update, context):
                 for id, name in context.chat_data['attendees'].items()
         ])
         context.bot.edit_message_text(
-            text="❖ ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ ɪꜱ ᴏᴠᴇʀ ʙᴀʙʏ. " +
+            text="𖣐 ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ ɪꜱ ᴏᴠᴇʀ ʙᴀʙʏ. " +
             str(len(context.chat_data['attendees'])) +
-            "❖ ᴍᴇᴍʙᴇʀ's ᴍᴀʀᴋᴇᴅ ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ.\n" +
+            "𖣐 ᴍᴇᴍʙᴇʀ's ᴍᴀʀᴋᴇᴅ ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ.\n" +
             "⬤ ʜᴇʀᴇ ɪꜱ ᴛʜᴇ ʟɪꜱᴛ ʙᴀʙʏ :\n- " + attendee_list,
             chat_id=context.chat_data['message'].chat_id,
             message_id=context.chat_data['message'].message_id,
@@ -82,7 +82,7 @@ def end_attendance(update, context):
         )
     else:
         context.bot.edit_message_text(
-            text="❖ ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ ɪꜱ ᴏᴠᴇʀ. ɴᴏ ᴏɴᴇ ᴡᴀꜱ ᴘʀᴇꜱᴇɴᴛ ʙᴀʙʏ.",
+            text="𖣐 ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ ɪꜱ ᴏᴠᴇʀ. ɴᴏ ᴏɴᴇ ᴡᴀꜱ ᴘʀᴇꜱᴇɴᴛ ʙᴀʙʏ.",
             chat_id=context.chat_data['message'].chat_id,
             message_id=context.chat_data['message'].message_id,
         )
@@ -93,7 +93,7 @@ def end_attendance(update, context):
 def end_attendance_cmd(update, context):
     if ('flag' not in context.chat_data) and (context.chat_data['flag'] != 1):
         update.message.reply_text(
-            "❖ ɴᴏ ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ ɪꜱ ɢᴏɪɴɢ ᴏɴ ʙᴀʙʏ.",
+            "𖣐 ɴᴏ ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ ɪꜱ ɢᴏɪɴɢ ᴏɴ ʙᴀʙʏ.",
         )
     else:
         if (context.chat_data['id'] != update.effective_chat.id):
@@ -104,9 +104,9 @@ def end_attendance_cmd(update, context):
                 for id, name in context.chat_data['attendees'].items()
             ])
             context.bot.edit_message_text(
-                text="❖ ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ ɪꜱ ᴏᴠᴇʀ ʙᴀʙʏ. " +
+                text="𖣐 ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ ɪꜱ ᴏᴠᴇʀ ʙᴀʙʏ. " +
                 str(len(context.chat_data['attendees'])) +
-            "❖ ᴍᴇᴍʙᴇʀ's ᴍᴀʀᴋᴇᴅ ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ.\n" +
+            "𖣐 ᴍᴇᴍʙᴇʀ's ᴍᴀʀᴋᴇᴅ ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ.\n" +
             "⬤ ʜᴇʀᴇ ɪꜱ ᴛʜᴇ ʟɪꜱᴛ ʙᴀʙʏ.\n- " + attendee_list,
                 chat_id=context.chat_data['message'].chat_id,
                 message_id=context.chat_data['message'].message_id,
@@ -114,7 +114,7 @@ def end_attendance_cmd(update, context):
             )
         else:
             context.bot.edit_message_text(
-                text="❖ ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ ɪꜱ ᴏᴠᴇʀ. ɴᴏ ᴏɴᴇ ᴡᴀꜱ ᴘʀᴇꜱᴇɴᴛ ʙᴀʙʏ.",
+                text="𖣐 ᴀᴛᴛᴇɴᴅᴀɴᴄᴇ ɪꜱ ᴏᴠᴇʀ. ɴᴏ ᴏɴᴇ ᴡᴀꜱ ᴘʀᴇꜱᴇɴᴛ ʙᴀʙʏ.",
                 chat_id=context.chat_data['message'].chat_id,
                 message_id=context.chat_data['message'].message_id,
             )
