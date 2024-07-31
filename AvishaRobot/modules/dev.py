@@ -17,7 +17,7 @@ from AvishaRobot.modules.helper_funcs.chat_status import dev_plus
 def allow_groups(update: Update, context: CallbackContext):
     args = context.args
     if not args:
-        update.effective_message.reply_text(f"❖ ᴄᴜʀʀᴇɴᴛ sᴛᴀᴛᴇ ᴏғ ᴀᴠɪsʜᴀ ❖ {AvishaRobot.ALLOW_CHATS}")
+        update.effective_message.reply_text(f"𖣐 ᴄᴜʀʀᴇɴᴛ sᴛᴀᴛᴇ ᴏғ ᴀᴠɪsʜᴀ 𖣐 {AvishaRobot.ALLOW_CHATS}")
         return
     if args[0].lower() in ["off", "no"]:
         AvishaRobot.ALLOW_CHATS = True
