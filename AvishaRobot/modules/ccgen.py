@@ -14,7 +14,7 @@ EVAA = [
 async def gen_cc(client, message):
     if len(message.command) < 2:
         return await message.reply_text(
-            "❖ ᴘʟᴇᴀsᴇ ɢɪᴠᴇ ᴍᴇ ᴀ ʙɪɴ ᴛᴏ ɢᴇɴᴇʀᴀᴛᴇ ᴄᴄ ..."
+            "𖣐 ᴘʟᴇᴀsᴇ ɢɪᴠᴇ ᴍᴇ ᴀ ʙɪɴ ᴛᴏ ɢᴇɴᴇʀᴀᴛᴇ ᴄᴄ ..."
         )
     try:
         await message.delete()
