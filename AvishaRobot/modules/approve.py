@@ -24,7 +24,7 @@ def approve(update, context):
     user_id = extract_user(message, args)
     if not user_id:
         message.reply_text(
-            "❖ ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ ʏᴏᴜ'ʀᴇ ᴛᴀʟᴋɪɴɢ ᴀʙᴏᴜᴛ, ʏᴏᴜ'ʀᴇ ɢᴏɪɴɢ ᴛᴏ ɴᴇᴇᴅ ᴛᴏ sᴘᴇᴄɪғʏ ᴀ ᴜsᴇʀ !"
+            "𖣐 ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ ʏᴏᴜ'ʀᴇ ᴛᴀʟᴋɪɴɢ ᴀʙᴏᴜᴛ, ʏᴏᴜ'ʀᴇ ɢᴏɪɴɢ ᴛᴏ ɴᴇᴇᴅ ᴛᴏ sᴘᴇᴄɪғʏ ᴀ ᴜsᴇʀ !"
         )
         return ""
     try:
@@ -33,18 +33,18 @@ def approve(update, context):
         return ""
     if member.status == "administrator" or member.status == "creator":
         message.reply_text(
-            "❖ ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ᴀᴅᴍɪɴ ➥ ʟᴏᴄᴋs, ʙʟᴏᴄᴋʟɪsᴛs, ᴀɴᴅ ᴀɴᴛɪғʟᴏᴏᴅ ᴀʟʀᴇᴀᴅʏ ᴅᴏɴ'ᴛ ᴀᴘᴘʟʏ ᴛᴏ ᴛʜᴇᴍ."
+            "𖣐 ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ᴀᴅᴍɪɴ ➥ ʟᴏᴄᴋs, ʙʟᴏᴄᴋʟɪsᴛs, ᴀɴᴅ ᴀɴᴛɪғʟᴏᴏᴅ ᴀʟʀᴇᴀᴅʏ ᴅᴏɴ'ᴛ ᴀᴘᴘʟʏ ᴛᴏ ᴛʜᴇᴍ."
         )
         return ""
     if sql.is_approved(message.chat_id, user_id):
         message.reply_text(
-            f"❖ [{member.user['first_name']}](tg://user?id={member.user['id']}) ɪs ᴀʟʀᴇᴀᴅʏ ᴀᴘᴘʀᴏᴠᴇᴅ ɪɴ ➥ {chat_title}",
+            f"𖣐 [{member.user['first_name']}](tg://user?id={member.user['id']}) ɪs ᴀʟʀᴇᴀᴅʏ ᴀᴘᴘʀᴏᴠᴇᴅ ɪɴ ➥ {chat_title}",
             parse_mode=ParseMode.MARKDOWN,
         )
         return ""
     sql.approve(message.chat_id, user_id)
     message.reply_text(
-        f"❖ [{member.user['first_name']}](tg://user?id={member.user['id']}) ʜᴀs ʙᴇᴇɴ ᴀᴘᴘʀᴏᴠᴇᴅ ɪɴ ➥ {chat_title}! ᴛʜᴇʏ ᴡɪʟʟ ɴᴏᴡ ʙᴇ ɪɢɴᴏʀᴇᴅ ʙʏ ᴀᴜᴛᴏᴍᴀᴛᴇᴅ ᴀᴅᴍɪɴ ᴀᴄᴛɪᴏɴs ʟɪᴋᴇ ʟᴏᴄᴋs, ʙʟᴏᴄᴋʟɪsᴛs, ᴀɴᴅ ᴀɴᴛɪғʟᴏᴏᴅ.",
+        f"𖣐 [{member.user['first_name']}](tg://user?id={member.user['id']}) ʜᴀs ʙᴇᴇɴ ᴀᴘᴘʀᴏᴠᴇᴅ ɪɴ ➥ {chat_title}! ᴛʜᴇʏ ᴡɪʟʟ ɴᴏᴡ ʙᴇ ɪɢɴᴏʀᴇᴅ ʙʏ ᴀᴜᴛᴏᴍᴀᴛᴇᴅ ᴀᴅᴍɪɴ ᴀᴄᴛɪᴏɴs ʟɪᴋᴇ ʟᴏᴄᴋs, ʙʟᴏᴄᴋʟɪsᴛs, ᴀɴᴅ ᴀɴᴛɪғʟᴏᴏᴅ.",
         parse_mode=ParseMode.MARKDOWN,
     )
     log_message = (
@@ -68,7 +68,7 @@ def disapprove(update, context):
     user_id = extract_user(message, args)
     if not user_id:
         message.reply_text(
-            "❖ ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ ʏᴏᴜ'ʀᴇ ᴛᴀʟᴋɪɴɢ ᴀʙᴏᴜᴛ, ʏᴏᴜ'ʀᴇ ɢᴏɪɴɢ ᴛᴏ ɴᴇᴇᴅ ᴛᴏ sᴘᴇᴄɪғʏ ᴀ ᴜsᴇʀ !"
+            "𖣐 ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ ʏᴏᴜ'ʀᴇ ᴛᴀʟᴋɪɴɢ ᴀʙᴏᴜᴛ, ʏᴏᴜ'ʀᴇ ɢᴏɪɴɢ ᴛᴏ ɴᴇᴇᴅ ᴛᴏ sᴘᴇᴄɪғʏ ᴀ ᴜsᴇʀ !"
         )
         return ""
     try:
@@ -76,14 +76,14 @@ def disapprove(update, context):
     except BadRequest:
         return ""
     if member.status == "administrator" or member.status == "creator":
-        message.reply_text("❖ ᴛʜɪs ᴜsᴇʀ ɪs ᴀɴ ᴀᴅᴍɪɴ, ᴛʜᴇʏ ᴄᴀɴ'ᴛ ʙᴇ ᴜɴᴀᴘᴘʀᴏᴠᴇᴅ.")
+        message.reply_text("𖣐 ᴛʜɪs ᴜsᴇʀ ɪs ᴀɴ ᴀᴅᴍɪɴ, ᴛʜᴇʏ ᴄᴀɴ'ᴛ ʙᴇ ᴜɴᴀᴘᴘʀᴏᴠᴇᴅ.")
         return ""
     if not sql.is_approved(message.chat_id, user_id):
-        message.reply_text(f"❖ {member.user['first_name']} ɪsɴ'ᴛ ᴀᴘᴘʀᴏᴠᴇᴅ ʏᴇᴛ!")
+        message.reply_text(f"𖣐 {member.user['first_name']} ɪsɴ'ᴛ ᴀᴘᴘʀᴏᴠᴇᴅ ʏᴇᴛ!")
         return ""
     sql.disapprove(message.chat_id, user_id)
     message.reply_text(
-        f"❖ {member.user['first_name']} ɪs ɴᴏ ʟᴏɴɢᴇʀ ᴀᴘᴘʀᴏᴠᴇᴅ ɪɴ ➥ {chat_title}."
+        f"𖣐 {member.user['first_name']} ɪs ɴᴏ ʟᴏɴɢᴇʀ ᴀᴘᴘʀᴏᴠᴇᴅ ɪɴ ➥ {chat_title}."
     )
     log_message = (
         f"❍ <b>{html.escape(chat.title)}</b>\n"
@@ -100,13 +100,13 @@ def approved(update, context):
     message = update.effective_message
     chat_title = message.chat.title
     chat = update.effective_chat
-    msg = "❖ ᴛʜᴇ ғᴏʟʟᴏᴡɪɴɢ ᴜsᴇʀs ᴀʀᴇ ᴀᴘᴘʀᴏᴠᴇᴅ.\n"
+    msg = "𖣐 ᴛʜᴇ ғᴏʟʟᴏᴡɪɴɢ ᴜsᴇʀs ᴀʀᴇ ᴀᴘᴘʀᴏᴠᴇᴅ.\n"
     approved_users = sql.list_approved(message.chat_id)
     for i in approved_users:
         member = chat.get_member(int(i.user_id))
         msg += f"- `{i.user_id}`: {member.user['first_name']}\n"
     if msg.endswith("approved.\n"):
-        message.reply_text(f"❖ ɴᴏ ᴜsᴇʀs ᴀʀᴇ ᴀᴘᴘʀᴏᴠᴇᴅ ɪɴ {chat_title}.")
+        message.reply_text(f"𖣐 ɴᴏ ᴜsᴇʀs ᴀʀᴇ ᴀᴘᴘʀᴏᴠᴇᴅ ɪɴ {chat_title}.")
         return ""
     else:
         message.reply_text(msg, parse_mode=ParseMode.MARKDOWN)
@@ -121,16 +121,16 @@ def approval(update, context):
     member = chat.get_member(int(user_id))
     if not user_id:
         message.reply_text(
-            "❖ ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ ʏᴏᴜ'ʀᴇ ᴛᴀʟᴋɪɴɢ ᴀʙᴏᴜᴛ, ʏᴏᴜ'ʀᴇ ɢᴏɪɴɢ ᴛᴏ ɴᴇᴇᴅ ᴛᴏ sᴘᴇᴄɪғʏ ᴀ ᴜsᴇʀ !"
+            "𖣐 ɪ ᴅᴏɴ'ᴛ ᴋɴᴏᴡ ᴡʜᴏ ʏᴏᴜ'ʀᴇ ᴛᴀʟᴋɪɴɢ ᴀʙᴏᴜᴛ, ʏᴏᴜ'ʀᴇ ɢᴏɪɴɢ ᴛᴏ ɴᴇᴇᴅ ᴛᴏ sᴘᴇᴄɪғʏ ᴀ ᴜsᴇʀ !"
         )
         return ""
     if sql.is_approved(message.chat_id, user_id):
         message.reply_text(
-            f"❖ {member.user['first_name']} ɪs ᴀɴ ᴀᴘᴘʀᴏᴠᴇᴅ ᴜsᴇʀ. ʟᴏᴄᴋs, ᴀɴᴛɪғʟᴏᴏᴅ, ᴀɴᴅ ʙʟᴏᴄᴋʟɪsᴛs ᴡᴏɴ'ᴛ ᴀᴘᴘʟʏ ᴛᴏ ᴛʜᴇᴍ."
+            f"𖣐 {member.user['first_name']} ɪs ᴀɴ ᴀᴘᴘʀᴏᴠᴇᴅ ᴜsᴇʀ. ʟᴏᴄᴋs, ᴀɴᴛɪғʟᴏᴏᴅ, ᴀɴᴅ ʙʟᴏᴄᴋʟɪsᴛs ᴡᴏɴ'ᴛ ᴀᴘᴘʟʏ ᴛᴏ ᴛʜᴇᴍ."
         )
     else:
         message.reply_text(
-            f"❖ {member.user['first_name']} ɪs ɴᴏᴛ ᴀɴ ᴀᴘᴘʀᴏᴠᴇᴅ ᴜsᴇʀ. ᴛʜᴇʏ ᴀʀᴇ ᴀғғᴇᴄᴛᴇᴅ ʙʏ ɴᴏʀᴍᴀʟ ᴄᴏᴍᴍᴀɴᴅs."
+            f"𖣐 {member.user['first_name']} ɪs ɴᴏᴛ ᴀɴ ᴀᴘᴘʀᴏᴠᴇᴅ ᴜsᴇʀ. ᴛʜᴇʏ ᴀʀᴇ ᴀғғᴇᴄᴛᴇᴅ ʙʏ ɴᴏʀᴍᴀʟ ᴄᴏᴍᴍᴀɴᴅs."
         )
 
 
@@ -140,7 +140,7 @@ def unapproveall(update: Update, context: CallbackContext):
     member = chat.get_member(user.id)
     if member.status != "creator" and user.id not in DRAGONS:
         update.effective_message.reply_text(
-            "❖ ᴏɴʟʏ ᴛʜᴇ ᴄʜᴀᴛ ᴏᴡɴᴇʀ ᴄᴀɴ ᴜɴᴀᴘᴘʀᴏᴠᴇ ᴀʟʟ ᴜsᴇʀs ᴀᴛ ᴏɴᴄᴇ."
+            "𖣐 ᴏɴʟʏ ᴛʜᴇ ᴄʜᴀᴛ ᴏᴡɴᴇʀ ᴄᴀɴ ᴜɴᴀᴘᴘʀᴏᴠᴇ ᴀʟʟ ᴜsᴇʀs ᴀᴛ ᴏɴᴄᴇ."
         )
     else:
         buttons = InlineKeyboardMarkup(
@@ -158,7 +158,7 @@ def unapproveall(update: Update, context: CallbackContext):
             ]
         )
         update.effective_message.reply_text(
-            f"❖ ᴀʀᴇ ʏᴏᴜ sᴜʀᴇ ʏᴏᴜ ᴡᴏᴜʟᴅ ʟɪᴋᴇ ᴛᴏ ᴜɴᴀᴘᴘʀᴏᴠᴇ ᴀʟʟ ᴜsᴇʀs ɪɴ ➥ {chat.title} ? ᴛʜɪs ᴀᴄᴛɪᴏɴ ᴄᴀɴɴᴏᴛ ʙᴇ ᴜɴᴅᴏɴᴇ.",
+            f"𖣐 ᴀʀᴇ ʏᴏᴜ sᴜʀᴇ ʏᴏᴜ ᴡᴏᴜʟᴅ ʟɪᴋᴇ ᴛᴏ ᴜɴᴀᴘᴘʀᴏᴠᴇ ᴀʟʟ ᴜsᴇʀs ɪɴ ➥ {chat.title} ? ᴛʜɪs ᴀᴄᴛɪᴏɴ ᴄᴀɴɴᴏᴛ ʙᴇ ᴜɴᴅᴏɴᴇ.",
             reply_markup=buttons,
             parse_mode=ParseMode.MARKDOWN,
         )
