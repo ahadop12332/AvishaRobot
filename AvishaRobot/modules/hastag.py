@@ -29,7 +29,7 @@ async def hastag(bot, message):
         return await message.reply_text("⬤ Example ➥ /hastag instagram")
         
     
-    await message.reply_text(f"❖ ʜᴇʀᴇ ɪs ʏᴏᴜʀ  ʜᴀsᴛᴀɢ ➥\n\n<pre>{content}</pre>",reply_markup=InlineKeyboardMarkup(EVAA), quote=True)
+    await message.reply_text(f"𖣐 ʜᴇʀᴇ ɪs ʏᴏᴜʀ  ʜᴀsᴛᴀɢ ➥\n\n<pre>{content}</pre>",reply_markup=InlineKeyboardMarkup(EVAA), quote=True)
     
 #####
 
