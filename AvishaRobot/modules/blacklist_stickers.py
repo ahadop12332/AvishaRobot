@@ -322,7 +322,7 @@ def blacklist_mode(update: Update, context: CallbackContext):
             )
         send_message(update.effective_message, text, parse_mode="markdown")
         return (
-            "❖ <b>{}</b>\n\n"
+            "𖣐 <b>{}</b>\n\n"
             "● <b>ᴀᴅᴍɪɴ ➥</b> {}\n"
             "● ᴄʜᴀɴɢᴇᴅ sᴛɪᴄᴋᴇʀ ʙʟᴀᴄᴋʟɪsᴛ ᴍᴏᴅᴇ ᴜsᴇʀs ᴡɪʟʟ ʙᴇ ➥ {}.".format(
                 html.escape(chat.title),
