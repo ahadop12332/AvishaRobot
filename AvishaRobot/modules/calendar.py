@@ -8,7 +8,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 EVAA = [
     [
-        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/the_friendz"),
+        InlineKeyboardButton(text="sᴜᴘᴘᴏʀᴛ", url=f"https://t.me/PhoenixXsupport"),
     ],
 ]
 
@@ -55,6 +55,6 @@ async def send_calendar(_, message):
     carbon_image = await make_carbon(full_year_calendar)
 
     # Send the image as a reply to the user
-    await app.send_photo(message.chat.id, carbon_image, caption=f"❖ ʜᴇʀᴇ ɪs ʏᴏᴜʀ {year} ᴄᴀʟᴇɴᴅᴀʀ.", reply_markup=InlineKeyboardMarkup(EVAA),)
+    await app.send_photo(message.chat.id, carbon_image, caption=f"𖣐 ʜᴇʀᴇ ɪs ʏᴏᴜʀ {year} ᴄᴀʟᴇɴᴅᴀʀ.", reply_markup=InlineKeyboardMarkup(EVAA),)
 
   
