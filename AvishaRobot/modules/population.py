@@ -30,7 +30,7 @@ def country_command_handler(client: Client, message: Message):
             population = country_info[0].get("population", "N/A")
 
             response_text = (
-                f"❖ ᴄᴏᴜɴᴛʀʏ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ❖\n\n"
+                f"𖣐 ᴄᴏᴜɴᴛʀʏ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ❖\n\n"
                 f"● ɴᴀᴍᴇ ➥ {country_name}\n"
                 f"● ᴄᴀᴘɪᴛᴀʟ ➥ {capital}\n"
                 f"● ᴘᴏᴘᴜʟᴀᴛɪᴏɴ ➥ {population}\n\n"
@@ -41,7 +41,7 @@ def country_command_handler(client: Client, message: Message):
     except requests.exceptions.HTTPError as http_err:
         response_text = f"✦ HTTP error occurred Enter correct Country code"
     except Exception as err:
-        response_text = f"✦ ᴇʀʀᴏʀ ➥ @H_CC_HELP"
+        response_text = f"✦ ᴇʀʀᴏʀ ➥ @PhoenixXsupport"
 
     # Send the response to the Telegram chat
     message.reply_text((response_text),reply_markup=InlineKeyboardMarkup(EVAA),)
