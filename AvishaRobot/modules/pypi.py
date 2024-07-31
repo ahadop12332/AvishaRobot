@@ -37,10 +37,10 @@ def pypi_info_command(client, message):
         
         if pypi_info:
             # Creating a message with PyPI information
-            info_message = f"❖ ᴘᴀᴄᴋᴀɢᴇ ɴᴀᴍᴇ ➥ `{pypi_info['info']['name']}`\n\n" \
+            info_message = f"𖣐 ᴘᴀᴄᴋᴀɢᴇ ɴᴀᴍᴇ ➥ `{pypi_info['info']['name']}`\n\n" \
                            f"● ʟᴀᴛᴇsᴛ ᴠᴇʀsɪᴏɴ ➥ `{pypi_info['info']['version']}`\n\n" \
                            f"● ᴅᴇsᴄʀɪᴘᴛɪᴏɴ ➥ {pypi_info['info']['summary']}\n\n" \
-                           f"❖ ᴘʀᴏᴊᴇᴄᴛ ᴜʀʟ ➥ {pypi_info['info']['project_urls']['Homepage']}"
+                           f"𖣐 ᴘʀᴏᴊᴇᴄᴛ ᴜʀʟ ➥ {pypi_info['info']['project_urls']['Homepage']}"
             
             
             client.send_message(message.chat.id, info_message, reply_markup=InlineKeyboardMarkup(EVAA),
