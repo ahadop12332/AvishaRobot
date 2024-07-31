@@ -55,7 +55,7 @@ async def chk_usr(_, message: Message):
         or lastname_before != message.from_user.last_name
     ):
         msg += f"""
-**❖ ᴜsᴇʀ sʜᴏʀᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ❖**
+**𖣐 ᴜsᴇʀ sʜᴏʀᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ 𖣐**
 
 **● ɴᴀᴍᴇ** ➥ {message.from_user.mention}
 **● ᴜsᴇʀ ɪᴅ** ➥ {message.from_user.id}
