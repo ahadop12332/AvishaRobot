@@ -24,24 +24,24 @@ from AvishaRobot.modules.log_channel import loggable
 
 def check_user(user_id: int, bot: Bot, chat: Chat) -> Optional[str]:
     if not user_id:
-        reply = "❖ You don't seem to be referring to a user or the ID specified is incorrect.."
+        reply = "𖣐 You don't seem to be referring to a user or the ID specified is incorrect.."
         return reply
 
     try:
         member = chat.get_member(user_id)
     except BadRequest as excp:
-        if excp.message == "❖ User not found":
-            reply = "❖ I can't seem to find this user"
+        if excp.message == "𖣐 User not found":
+            reply = "𖣐 I can't seem to find this user"
             return reply
         else:
             raise
 
     if user_id == bot.id:
-        reply = "❖ I'm not gonna MUTE myself, How high are you?"
+        reply = "𖣐 I'm not gonna MUTE myself, How high are you?"
         return reply
 
     if is_user_admin(chat, user_id, member) or user_id in TIGERS:
-        reply = "❖ Can't. Find someone else to mute but not this one."
+        reply = "𖣐 Can't. Find someone else to mute but not this one."
         return reply
 
     return None
@@ -83,13 +83,13 @@ def mute(update: Update, context: CallbackContext) -> str:
         bot.restrict_chat_member(chat.id, user_id, chat_permissions)
         bot.sendMessage(
             chat.id,
-            f"❖ ᴍᴜᴛᴇᴅ <b>{html.escape(member.user.first_name)}</b> ᴡɪᴛʜ ɴᴏ ᴇxᴘɪʀᴀᴛɪᴏɴ ᴅᴀᴛᴇ.",
+            f"𖣐 ᴍᴜᴛᴇᴅ <b>{html.escape(member.user.first_name)}</b> ᴡɪᴛʜ ɴᴏ ᴇxᴘɪʀᴀᴛɪᴏɴ ᴅᴀᴛᴇ.",
             parse_mode=ParseMode.HTML,
         )
         return log
 
     else:
-        message.reply_text("❖ ᴛʜɪs ᴜsᴇʀ ᴀʟʀᴇᴀᴅʏ ᴍᴜᴛᴇᴅ.")
+        message.reply_text("𖣐 ᴛʜɪs ᴜsᴇʀ ᴀʟʀᴇᴀᴅʏ ᴍᴜᴛᴇᴅ.")
 
     return ""
 @connection_status
@@ -148,7 +148,7 @@ def unmute(update: Update, context: CallbackContext) -> str:
     user_id = extract_user(message, args)
     if not user_id:
         message.reply_text(
-            "❖ You'll need to either give me a username to unmute, or reply to someone to be unmuted."
+            "𖣐 You'll need to either give me a username to unmute, or reply to someone to be unmuted."
         )
         return ""
 
@@ -161,7 +161,7 @@ def unmute(update: Update, context: CallbackContext) -> str:
             and member.can_send_other_messages
             and member.can_add_web_page_previews
         ):
-            message.reply_text("❖ ᴛʜɪs ᴜsᴇʀ ᴀʟʀᴇᴀᴅʏ ʜᴀs ᴛʜᴇ ʀɪɢʜᴛ ᴛᴏ sᴘᴇᴀᴋ.")
+            message.reply_text("𖣐 ᴛʜɪs ᴜsᴇʀ ᴀʟʀᴇᴀᴅʏ ʜᴀs ᴛʜᴇ ʀɪɢʜᴛ ᴛᴏ sᴘᴇᴀᴋ.")
         else:
             chat_permissions = ChatPermissions(
                 can_send_messages=True,
@@ -179,7 +179,7 @@ def unmute(update: Update, context: CallbackContext) -> str:
                 pass
             bot.sendMessage(
                 chat.id,
-                f"❖ ɪ sʜᴀʟʟ ᴀʟʟᴏᴡ <b>{html.escape(member.user.first_name)}</b> ᴛᴏ ᴛᴇxᴛ.",
+                f"𖣐 ɪ sʜᴀʟʟ ᴀʟʟᴏᴡ <b>{html.escape(member.user.first_name)}</b> ᴛᴏ ᴛᴇxᴛ.",
                 parse_mode=ParseMode.HTML,
             )
             return (
@@ -189,7 +189,7 @@ def unmute(update: Update, context: CallbackContext) -> str:
             )
     else:
         message.reply_text(
-            "❖ This user isn't even in the chat, unmuting them won't make them talk more than they "
+            "𖣐 This user isn't even in the chat, unmuting them won't make them talk more than they "
             "already do!"
         )
 
@@ -217,7 +217,7 @@ def temp_mute(update: Update, context: CallbackContext) -> str:
     member = chat.get_member(user_id)
 
     if not reason:
-        message.reply_text("❖ You haven't specified a time to mute this user for!")
+        message.reply_text("𖣐 You haven't specified a time to mute this user for!")
         return ""
 
     split_reason = reason.split(None, 1)
@@ -256,10 +256,10 @@ def temp_mute(update: Update, context: CallbackContext) -> str:
             )
             return log
         else:
-            message.reply_text("❖ ᴛʜɪs ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ᴍᴜᴛᴇᴅ.")
+            message.reply_text("𖣐 ᴛʜɪs ᴜsᴇʀ ɪs ᴀʟʀᴇᴀᴅʏ ᴍᴜᴛᴇᴅ.")
 
     except BadRequest as excp:
-        if excp.message == "❖ Reply message not found":
+        if excp.message == "𖣐 Reply message not found":
             # Do not reply
             message.reply_text(f"⬤ ᴍᴜᴛᴇᴅ ғᴏʀ {time_val}!", quote=False)
             return log
@@ -272,7 +272,7 @@ def temp_mute(update: Update, context: CallbackContext) -> str:
                 chat.id,
                 excp.message,
             )
-            message.reply_text("❖ ɪ ᴄᴀɴ'ᴛ ᴍᴜᴛᴇ ᴛʜᴀᴛ ᴜsᴇʀ.")
+            message.reply_text("𖣐 ɪ ᴄᴀɴ'ᴛ ᴍᴜᴛᴇ ᴛʜᴀᴛ ᴜsᴇʀ.")
 
     return ""
 
