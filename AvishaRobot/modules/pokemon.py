@@ -33,9 +33,9 @@ async def CutexMusic(client, message):
         stats = {stat["stat"]["name"].capitalize(): stat["base_stat"] for stat in data["stats"]}
 
         # response messssages
-        response_message = f"❖ {name} ⏤͟͟͞͞★\n\n"
+        response_message = f"𖣐 {name} ⏤͟͟͞͞★\n\n"
         response_message += f"● ᴀʙɪʟɪᴛɪᴇs ➥ {abilities}\n\n"
-        response_message += "❖ ᴘᴏᴋᴇᴍᴏɴ sᴛᴀᴛs ⏤͟͟͞͞★\n\n"
+        response_message += "𖣐 ᴘᴏᴋᴇᴍᴏɴ sᴛᴀᴛs ⏤͟͟͞͞★\n\n"
         for stat, value in stats.items():
             response_message += f"● {stat} ➥ {value}\n"
 
@@ -48,7 +48,7 @@ async def CutexMusic(client, message):
         await message.reply_text(f"⬤ ᴇʀʀᴏʀ ➥ {e}")
     except requests.RequestException as e:
            # ITTU SA ERROR 
-        await message.reply_text("⬤ ᴇʀʀᴏʀ ➥ @The_Friendz ♥︎")
+        await message.reply_text("⬤ ᴇʀʀᴏʀ ➥ @PhoenixXsupport ♥︎")
     except KeyError:
            # I THIKNK YE NHI CHIYE 
         await message.reply_text("⬤ ᴘᴏᴋᴇᴍᴏɴ ᴡᴀs ɴᴏᴛ ғᴏᴜɴᴅ.")
