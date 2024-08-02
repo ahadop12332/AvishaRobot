@@ -318,37 +318,7 @@ def start(update: Update, context: CallbackContext):
             
             x=update.effective_message.reply_sticker(
                 random.choice(STICKER))
-            x.delete()
-            usr = update.effective_user
-            lol = update.effective_message.reply_text(
-                PM_START_TEX.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
-            )
-            time.sleep(0.4)
-            lol.edit_text("🔟")
-            time.sleep(0.3)
-            lol.edit_text("9️⃣")
-            time.sleep(0.3)
-            lol.edit_text("8️⃣")
-            time.sleep(0.3)
-            lol.edit_text("7️⃣")
-            time.sleep(0.3)
-            lol.edit_text("6️⃣")
-            time.sleep(0.3)
-            lol.edit_text("5️⃣")
-            time.sleep(0.3)
-            lol.edit_text("4️⃣")
-            time.sleep(0.3)
-            lol.edit_text("3️⃣")
-            time.sleep(0.3)
-            lol.edit_text("2️⃣")
-            time.sleep(0.3)
-            lol.edit_text("1️⃣")
-            time.sleep(0.3)
-            lol.edit_text("0️⃣")
-            time.sleep(0.3)
-            lol.edit_text("ʟᴇᴛ's ɢᴏ...♥︎")
-            lol.delete()
-                
+            x.delete()                
             update.effective_message.reply_photo(random.choice(NYKAA),PM_START_TEXT.format(escape_markdown(first_name),BOT_NAME,sql.num_users(),sql.num_chats()),
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
