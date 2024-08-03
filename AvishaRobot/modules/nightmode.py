@@ -101,7 +101,7 @@ async def disable_ws(event):
         return
     rmnightmode(str(event.chat_id))
     await event.reply(
-        f"𖣐 ɴɪɢʜᴛ ᴍᴏᴅᴇ ᴏғғ ᴀᴛ ᴛʜɪs ɢʀᴏᴜᴘ\n\n● ʀᴇᴍᴏᴠᴇᴅ ᴄʜᴀᴛ ➥ `{event.chat.title}` \n● ɢʀᴏᴜᴘ ɪᴅ ➥  `{event.chat_id}` \n\n𖣐 ᴘᴏᴡᴇʀᴅ ʙʏ ➥ [ʟ ᴜ ᴄ ʏ • / ‹𝟹](https://t.me/thexparadise)", buttons=button_row
+        f"𖣐 ɴɪɢʜᴛ ᴍᴏᴅᴇ ᴏғғ ᴀᴛ ᴛʜɪs ɢʀᴏᴜᴘ\n\n● ʀᴇᴍᴏᴠᴇᴅ ᴄʜᴀᴛ ➥ `{event.chat.title}` \n● ɢʀᴏᴜᴘ ɪᴅ ➥  `{event.chat_id}` \n\n𖣐 ᴘᴏᴡᴇʀᴅ ʙʏ ➥ [ʟ ᴜ ᴄ ʏ • / ‹𝟹](https://t.me/thep_aradise)", buttons=button_row
     )
 
 
@@ -137,7 +137,7 @@ async def job_open():
         try:
             await tbot.send_message(
                 int(warner.chat_id),
-                f"𖣐 ɢʀᴏᴜᴘ ɪꜱ ᴏᴘᴇɴɪɴɢ, ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ ᴇᴠᴇʀʏᴏɴᴇ !\n\n● ᴍᴀʏ ᴛʜɪs ᴅᴀʏ ᴄᴏᴍᴇ ᴡɪᴛʜ ᴀʟʟ ᴛʜᴇ ʟᴏᴠᴇ ʏᴏᴜʀ ʜᴇᴀʀᴛ ᴄᴀɴ ʜᴏʟᴅ ᴀɴᴅ ʙʀɪɴɢ ʏᴏᴜ ᴇᴠᴇʀʏ sᴜᴄᴄᴇss ʏᴏᴜ ᴅᴇsɪʀᴇ. ᴍᴀʏ ᴇᴀᴄʜ ᴏғ ʏᴏᴜʀ ғᴏᴏᴛsᴛᴇᴘs ʙʀɪɴɢ ᴊᴏʏ ᴛᴏ ᴛʜᴇ ᴇᴀʀᴛʜ ᴀɴᴅ ʏᴏᴜʀsᴇʟғ. ɪ ᴡɪsʜ ʏᴏᴜ ᴀ ᴍᴀɢɪᴄᴀʟ ᴅᴀʏ ᴀɴᴅ ᴀ ᴡᴏɴᴅᴇʀғᴜʟ ʟɪғᴇ ᴀʜᴇᴀᴅ.\n\n𖣐 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ [ʟ ᴜ ᴄ ʏ • / ‹𝟹](https://t.me/thexparadise)",buttons=button_row)
+                f"𖣐 ɢʀᴏᴜᴘ ɪꜱ ᴏᴘᴇɴɪɴɢ, ɢᴏᴏᴅ ᴍᴏʀɴɪɴɢ ᴇᴠᴇʀʏᴏɴᴇ !\n\n● ᴍᴀʏ ᴛʜɪs ᴅᴀʏ ᴄᴏᴍᴇ ᴡɪᴛʜ ᴀʟʟ ᴛʜᴇ ʟᴏᴠᴇ ʏᴏᴜʀ ʜᴇᴀʀᴛ ᴄᴀɴ ʜᴏʟᴅ ᴀɴᴅ ʙʀɪɴɢ ʏᴏᴜ ᴇᴠᴇʀʏ sᴜᴄᴄᴇss ʏᴏᴜ ᴅᴇsɪʀᴇ. ᴍᴀʏ ᴇᴀᴄʜ ᴏғ ʏᴏᴜʀ ғᴏᴏᴛsᴛᴇᴘs ʙʀɪɴɢ ᴊᴏʏ ᴛᴏ ᴛʜᴇ ᴇᴀʀᴛʜ ᴀɴᴅ ʏᴏᴜʀsᴇʟғ. ɪ ᴡɪsʜ ʏᴏᴜ ᴀ ᴍᴀɢɪᴄᴀʟ ᴅᴀʏ ᴀɴᴅ ᴀ ᴡᴏɴᴅᴇʀғᴜʟ ʟɪғᴇ ᴀʜᴇᴀᴅ.\n\n𖣐 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ [ʟ ᴜ ᴄ ʏ • / ‹𝟹](https://t.me/thep_aradise)",buttons=button_row)
             await tbot(
                 functions.messages.EditChatDefaultBannedRightsRequest(
                     peer=int(warner.chat_id), banned_rights=openhehe
