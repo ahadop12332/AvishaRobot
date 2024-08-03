@@ -15,7 +15,7 @@ chat_id_env = environ.get("CHAT_ID")
 CHAT_ID = [int(app) for app in chat_id_env.split(",")] if chat_id_env else []
 
 TEXT = environ.get("APPROVED_WELCOME_TEXT", "⬤ ʜᴇʟʟᴏ ʙᴀʙʏ ➥ {mention} ♥︎\n\n⬤ ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ➥ {title}\n\n")
-APPROVED = environ.get("APPROVED_WELCOME", "on").lower()
+APPROVED = environ.get("APPROVED_WELCOME", "off").lower()
 
 # Define an event handler for chat join requests
 @app.on_chat_join_request((filters.group | filters.channel) & filters.chat(CHAT_ID) if CHAT_ID else (filters.group | filters.channel))
