@@ -82,8 +82,6 @@ PM_START_TEXT = """
 ──『 *You better be ready to train hard!* 』──
 """ 
 
-buttons"""
-
 buttons = [
     [
         InlineKeyboardButton(
