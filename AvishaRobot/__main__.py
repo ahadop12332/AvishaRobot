@@ -71,16 +71,35 @@ def get_readable_time(seconds: int) -> str:
 
     return ping_time 
 PM_START_TEXT = """ 
-*┗► What's Up, Earthling! ◄┛*
-ㅤ
-ɪ ᴀᴍ ʏᴏᴜʀ ˹ ᴋᴧɪ ꭙ ꝛᴏʙσᴛ™ ♡゙ ʙᴏᴛ
-▰▱▰▱▰▱▰▱▰▱▰▱▰▱▰▱
-➥ ɪ ᴀᴍ ᴍᴏꜱᴛ ᴘᴏᴡᴇʀꜰᴜʟ ᴀɴᴅ ᴀᴅᴠᴀɴᴄᴇ ᴛᴇʟᴇɢʀᴀᴍ ʙᴏᴛ ʜᴇʟᴘ ʏᴏᴜ ᴛᴏ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘ ᴡɪᴛʜ ꜱᴏᴍᴇ ᴀᴡᴇꜱᴏᴍᴇ ꜰᴇᴀᴛᴜʀᴇs.
+ᴡᴇʟᴄᴏᴍᴇ ʙᴀʙʏ....
+"""
+#####
 
-ᴜɴʟᴏᴄᴋɪɴɢ ꜱᴛʀᴜᴄᴛᴜʀᴇᴅ ʟɪɴᴇ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ, ᴀɴᴅ ᴄᴜᴛᴛɪɴɢ-ᴇᴅɢᴇ ᴀɪ ꜰᴇᴀᴛᴜʀᴇꜱ ꜰᴏʀ ᴇꜰꜰᴏʀᴛʟᴇꜱꜱ ɢʀᴏᴜᴘ ᴍᴀꜱᴛᴇʀʏ! ◎[🪐]({})
+STICKER = [
+"CAACAgUAAx0Cd9xEawACEQlmLuvFijxhTZXjFbLPOsZFBoZzYQAC2AUAAkVZsVftrDRpvXZTAAE0BA",
+"CAACAgUAAx0Cd9xEawACEQhmLuvFeujHQdaxeDtr3MZThRXa1QACkgcAArZSuVfbJAABQq5pIc80BA",
+"CAACAgUAAx0Cd9xEawACEQdmLuvFQdwX-ySKIrmq-JPWItfhhgACwQUAAi9GuVfYV7lLP7xl4zQE",
+"CAACAgUAAx0Cd9xEawACEQVmLuuiUNrymw5wWSie-agvZ-_MdgACNAQAAi9GsFf3M2dSfxH-YDQE",
+"CAACAgUAAx0Cd9xEawACEQNmLuuKwCEUmunIPFoxUL1Kr2Dp1AAChQgAApAXsFeIwfQvrfbmjjQE",
+"CAACAgUAAx0Cd9xEawACEQJmLut22O_5LobAKvCBNlOHbCnQcQAC8gQAAmRQsVdeP26A2AJofzQE",
+"CAACAgUAAx0Cd9xEawACEQABZi7rYhnPjPsm_g37JvqoH7qB10gAAsgEAAJWgShXcBbC69nedAY0BA",
+"CAACAgUAAx0Cd9xEawACEP9mLutgBdWYCVPqQ_kvUGgYoNVIVwACrAYAAof0IFc6sUwgfJZw6zQE",
+"CAACAgEAAx0Cd9xEawACEPtmLusPo3kBvdEigRxbcqGOMSF9cgAC8wMAAqpT6UU55jSF8wAByTc0BA",
+"CAACAgEAAx0Cd9xEawACEPpmLusJTIEch-TXN5KsPkvdfnypNgACbwIAAkoY6UUP_O3RGOXeSTQE",
+"CAACAgEAAx0Cd9xEawACEPlmLusBSvWNswwz99iOXBMIos0s_QACGAMAAtfI6EX4deIoUongJDQE",
+"CAACAgEAAx0Cd9xEawACEPdmLuropCmTrN0Xv4_C7plvS45D3gACrwIAAqyx6EVOdFVb4d8VsDQE",
+"CAACAgUAAx0Cd9xEawACEOhmLurMc76ZYy9ZWB0dcuWfNJVSzQACLwUAAk-LuVelZAHYP-pxnTQE",
+"CAACAgUAAx0Cd9xEawACEOZmLuq8MMZnoz-txKJ9QEow9qDKxQACKwQAAvbXuVf7GDiuoypXFzQE",
+"CAACAgUAAx0Cd9xEawACEORmLuq3Mm3dzamR5W8JZhZHgbPWKwACJwcAAvQcsFefMIzhat8ZtDQE",
+"CAACAgUAAx0Cd9xEawACEONmLuqxMsLOLjCsMIf86_QuZH0AAaAAAusMAAIRzNhVUrENdULkjis0BA",
+"CAACAgUAAx0Cd9xEawACEOFmLuqryqMN4_7KPq_LLZNIq0OPEgACJAwAAm5mwVXkZ2Ycjy1rRjQE",
+"CAACAgUAAx0Cd9xEawACEN9mLuqlG8RAw-L8e1Pv3909WrYMhgACwBUAAh-sOVQ3vSSCUJbSYzQE",
+]
 
-──『 *You better be ready to train hard!* 』──
-""" 
+####
+
+PM_START_TEXT = """ 
+*𖣐 ʜᴇʏ {}, ᴡᴇʟᴄᴏᴍᴇ ʙᴀʙʏ* 💗\n━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n๏ {}, ɪs ᴛʜᴇ ᴍᴏsᴛ ᴄᴏᴍᴘʟᴇᴛᴇ ʙᴏᴛ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘs ᴇᴀsɪʟʏ ᴀɴᴅ sᴀғᴇʟʏ.\n\n๏ ᴜsᴇʀs ➥ {}\n๏ ᴄʜᴀᴛs ➥ {}\n\n──────────────────\n𖣐 *ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʜᴇʟᴩ ʙᴜᴛᴛᴏɴ ᴛᴏ ɢᴇᴛ ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ᴍʏ ᴍᴏᴅᴜʟᴇs ᴀɴᴅ ᴄᴏᴍᴍᴀɴᴅs.*"""
 
 buttons = [
     [
@@ -110,7 +129,8 @@ roy = [
 HELP_STRINGS = f"""
 𖣐 *{BOT_NAME} ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ ᴀʙᴏᴜᴛ sᴘᴇᴄɪғɪᴄs ᴄᴏᴍᴍᴀɴᴅ.*"""
 
-ABHI = [ "https://graph.org/file/f76fd86d1936d45a63c64.jpg",
+ABHI = [
+"https://graph.org/file/f76fd86d1936d45a63c64.jpg",
 "https://graph.org/file/69ba894371860cd22d92e.jpg",
 "https://graph.org/file/67fde88d8c3aa8327d363.jpg",
 "https://graph.org/file/3a400f1f32fc381913061.jpg",
