@@ -110,8 +110,7 @@ roy = [
 HELP_STRINGS = f"""
 𖣐 *{BOT_NAME} ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴ ʙᴇʟʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ ᴀʙᴏᴜᴛ sᴘᴇᴄɪғɪᴄs ᴄᴏᴍᴍᴀɴᴅ.*"""
 
-ABHI = (
-"https://graph.org/file/f76fd86d1936d45a63c64.jpg",
+ABHI = ( "https://graph.org/file/f76fd86d1936d45a63c64.jpg",
 "https://graph.org/file/69ba894371860cd22d92e.jpg",
 "https://graph.org/file/67fde88d8c3aa8327d363.jpg",
 "https://graph.org/file/3a400f1f32fc381913061.jpg",
@@ -151,9 +150,7 @@ ABHI = (
 "https://graph.org/file/8f8516c86677a8c91bfb1.jpg",
 "https://graph.org/file/6603c3740378d3f7187da.jpg",
 "https://graph.org/file/66cb6ec40eea5c4670118.jpg",
-"https://graph.org/file/2e3cf4327b169b981055e.jpg",    
-
-)
+"https://graph.org/file/2e3cf4327b169b981055e.jpg",)
 
 NYKAA = (
     "https://graph.org/file/9bba2b7ee9ba3806de65d.jpg",
