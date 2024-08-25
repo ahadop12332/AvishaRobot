@@ -54,7 +54,7 @@ def welcomepic(pic, user, chat, id, uname):
     return f"downloads/welcome#{id}.png"
 
 CUTE = """**
-@app.on_message(filters.command("zwelcome", COMMAND_HANDLER) & ~filters.private)
+@app.on_message(filters.command("zwelcome", COMMAND_HANDLER) & ~filters.public)
 async def auto_state(_, message):
     usage = "**❅ ᴜsᴀɢᴇ ➥ **/zwelcome [ᴇɴᴀʙʟᴇ|ᴅɪsᴀʙʟᴇ]"
     if len(message.command) == 1:
