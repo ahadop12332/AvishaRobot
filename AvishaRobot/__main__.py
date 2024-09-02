@@ -471,7 +471,7 @@ def Avisha_about_callback(update: Update, context: CallbackContext):
                 [
                     [
                         InlineKeyboardButton(text="ʙᴀᴄᴋ", callback_data="avisha_back"),
-                        InlineKeyboardButton(text="ᴄᴄ ʜᴇʟᴘ", url="https://t.me/h_cc_help"),
+                        InlineKeyboardButton(text="ᴅᴇᴠ", url="https://t.me/where_lucy"),
                     ],
                 ]
             ),
