@@ -48,6 +48,43 @@ def welcomepic(pic, user, chat, id, uname):
     background.save(f"downloads/welcome#{id}.png")
     return f"downloads/welcome#{id}.png"
 
+@app.on_message(filters.command("zwelcome", COMMAND_HANDLER) & filters.group)
+async def auto_state(_, message):
+    usage = "**❅ ᴜsᴀɢᴇ ➥ **/zwelcome [ᴇɴᴀʙʟᴇ|ᴅɪsᴀʙʟᴇ]"
+    
+    if len(message.command) == 1:
+        return await message.reply_text(usage)
+    
+    chat_id = message.chat.id
+    user = await app.get_chat_member(chat_id, message.from_user.id)
+    
+    # Check if the user is an admin or owner
+    if user.status not in (enums.ChatMemberStatus.ADMINISTRATOR, enums.ChatMemberStatus.OWNER):
+        return await message.reply("๏ ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ")
+    
+    # Fetch welcome state from the database
+    A = await wlcm.find_one({"chat_id": chat_id})
+    state = message.text.split(None, 1)[1].strip().lower()
+
+    # Enable special welcome
+    if state == "enable":
+        if A:
+            return await message.reply_text("๏ sᴘᴇᴄɪᴀʟ ᴡᴇʟᴄᴏᴍᴇ ᴀʟʀᴇᴀᴅʏ ᴇɴᴀʙʟᴇᴅ")
+        await add_wlcm(chat_id)  # Add welcome settings to the database
+        return await message.reply_text(f"๏ ᴇɴᴀʙʟᴇᴅ sᴘᴇᴄɪᴀʟ ᴡᴇʟᴄᴏᴍᴇ ɪɴ ➥ {message.chat.title}")
+    
+    # Disable special welcome
+    elif state == "disable":
+        if not A:
+            return await message.reply_text("๏ sᴘᴇᴄɪᴀʟ ᴡᴇʟᴄᴏᴍᴇ ᴀʟʀᴇᴀᴅʏ ᴅɪsᴀʙʟᴇᴅ")
+        await rm_wlcm(chat_id)  # Remove welcome settings from the database
+        return await message.reply_text(f"๏ ᴅɪsᴀʙʟᴇᴅ sᴘᴇᴄɪᴀʟ ᴡᴇʟᴄᴏᴍᴇ ɪɴ ➥ {message.chat.title}")
+    
+    # Invalid state
+    else:
+        return await message.reply_text(usage)
+
+
 @app.on_chat_member_updated(filters.group, group=-3)
 async def greet_group(_, member: ChatMemberUpdated):
     chat_id = member.chat.id
