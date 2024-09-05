@@ -1,13 +1,61 @@
-from AvishaRobot.database.wel_db import *  # Same DB for welcome will be used for goodbye
-from pyrogram import filters
+from AvishaRobot import pbot as app
+from pyrogram import filters, enums
+from pyrogram.types import ChatMemberUpdated, InlineKeyboardMarkup, InlineKeyboardButton
+from AvishaRobot.database.wel_db import wlcm
 
+EVAA = [
+    [
+        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/avishaxbot?startgroup=true"),
+    ],
+]
+
+# --------------------------------------------------------------------------------- #
+# Helper Functions
+get_font = lambda font_size, font_path: ImageFont.truetype(font_path, font_size)
+resize_text = (
+    lambda text_size, text: (text[:text_size] + "...").upper()
+    if len(text) > text_size
+    else text.upper()
+)
+
+async def get_userinfo_img(
+    bg_path: str,
+    font_path: str,
+    user_id: Union[int, str],
+    profile_path: Optional[str] = None
+):
+    bg = Image.open(bg_path)
+
+    if profile_path:
+        img = Image.open(profile_path)
+        mask = Image.new("L", img.size, 0)
+        draw = ImageDraw.Draw(mask)
+        draw.pieslice([(0, 0), img.size], 0, 360, fill=255)
+
+        circular_img = Image.new("RGBA", img.size, (0, 0, 0, 0))
+        circular_img.paste(img, (0, 0), mask)
+        resized = circular_img.resize((286, 286))
+        bg.paste(resized, (297, 117), resized)
+
+    img_draw = ImageDraw.Draw(bg)
+
+    path = f"./userinfo_img_{user_id}.png"
+    bg.save(path)
+    return path
+
+# --------------------------------------------------------------------------------- #
+
+bg_path = "AvishaRobot/Love/CUTELEF.jpg"
+font_path = "AvishaRobot/Love/SwanseaBold-D0ox.ttf"
+
+# --------------------------------------------------------------------------------- #
 # Goodbye message enable/disable command
 @app.on_message(filters.command("zgoodbye", COMMAND_HANDLER) & ~filters.public)
 async def auto_goodbye_state(_, message):
     usage = "**❅ Usage ➥ **/zgoodbye [enable|disable]"
     if len(message.command) == 1:
         return await message.reply_text(usage)
-    
+
     chat_id = message.chat.id
     user = await app.get_chat_member(message.chat.id, message.from_user.id)
     
@@ -35,6 +83,7 @@ async def auto_goodbye_state(_, message):
     else:
         await message.reply("๏ Only admins can use this command")
 
+# --------------------------------------------------------------------------------- #
 # Goodbye message handler
 @app.on_chat_member_updated(filters.group, group=-5)
 async def member_has_left(client: app, member: ChatMemberUpdated):
