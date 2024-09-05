@@ -48,38 +48,65 @@ def welcomepic(pic, user, chat, id, uname):
     background.save(f"downloads/welcome#{id}.png")
     return f"downloads/welcome#{id}.png"
 
-@app.on_message(filters.command("zwelcome", COMMAND_HANDLER) & filters.group)
-async def auto_state(_, message):
-    usage = "**❅ ᴜsᴀɢᴇ ➥ **/zwelcome [ᴇɴᴀʙʟᴇ|ᴅɪsᴀʙʟᴇ]"
+@app.on_chat_member_updated(filters.group, group=-3)
+async def greet_group(_, member: ChatMemberUpdated):
+    chat_id = member.chat.id
     
-    if len(message.command) == 1:
-        return await message.reply_text(usage)
-    
-    chat_id = message.chat.id
-    user = await app.get_chat_member(chat_id, message.from_user.id)
-    
-    # Check if the user is an admin or owner
-    if user.status not in (enums.ChatMemberStatus.ADMINISTRATOR, enums.ChatMemberStatus.OWNER):
-        return await message.reply("๏ ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ")
-    
-    # Fetch welcome state from the database
+    # Check if special welcome is enabled
     A = await wlcm.find_one({"chat_id": chat_id})
-    state = message.text.split(None, 1)[1].strip().lower()
+    
+    # If no entry is found (meaning welcome is disabled), exit the function
+    if not A:
+        return
+    
+    if (
+        not member.new_chat_member
+        or member.new_chat_member.status in {"restricted"}
+        or member.old_chat_member
+    ):
+        return
+    
+    user = member.new_chat_member.user if member.new_chat_member else member.from_user
+    
+    try:
+        pic = await app.download_media(
+            user.photo.big_file_id, file_name=f"pp{user.id}.png"
+        )
+    except AttributeError:
+        pic = "HuTao/resources/profilepic.jpg"
+    
+    if temp.MELCOW.get(f"welcome-{member.chat.id}") is not None:
+        try:
+            await temp.MELCOW[f"welcome-{member.chat.id}"].delete()
+        except Exception as e:
+            LOGGER.error(e)
+    
+    try:
+        welcomeimg = welcomepic(
+            pic, user.first_name, member.chat.title, user.id, user.username
+        )
+        temp.MELCOW[f"welcome-{member.chat.id}"] = await app.send_photo(
+            member.chat.id,
+            photo=welcomeimg,
+            caption= f"""
+**ㅤㅤㅤ◦•●◉✿ ᴡᴇʟᴄᴏᴍᴇ ʙᴀʙʏ ✿◉●•◦
+▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰
 
-    # Enable special welcome
-    if state == "enable":
-        if A:
-            return await message.reply_text("๏ sᴘᴇᴄɪᴀʟ ᴡᴇʟᴄᴏᴍᴇ ᴀʟʀᴇᴀᴅʏ ᴇɴᴀʙʟᴇᴅ")
-        await add_wlcm(chat_id)  # Add welcome settings to the database
-        return await message.reply_text(f"๏ ᴇɴᴀʙʟᴇᴅ sᴘᴇᴄɪᴀʟ ᴡᴇʟᴄᴏᴍᴇ ɪɴ ➥ {message.chat.title}")
+● ɢʀᴏᴜᴘ ➥ {member.chat.title}
+● ɴᴀᴍᴇ ➥ {user.mention}
+● ᴜsᴇʀ ɪᴅ ➥ {user.id}
+● ᴜsᴇʀɴᴀᴍᴇ ➥ @{user.username}
+
+𖣐 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ [ʟ ᴜ ᴄ ʏ • / ‹𝟹゙](https://t.me/PhoenixXsupport)**
+▰▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▱▰
+""",
+            reply_markup=InlineKeyboardMarkup([[InlineKeyboardButton(f"ᴠɪᴇᴡ ᴜsᴇʀ", url=f"https://t.me/{user.username}")]])
+        )
+    except Exception as e:
+        LOGGER.error(e)
     
-    # Disable special welcome
-    elif state == "disable":
-        if not A:
-            return await message.reply_text("๏ sᴘᴇᴄɪᴀʟ ᴡᴇʟᴄᴏᴍᴇ ᴀʟʀᴇᴀᴅʏ ᴅɪsᴀʙʟᴇᴅ")
-        await rm_wlcm(chat_id)  # Remove welcome settings from the database
-        return await message.reply_text(f"๏ ᴅɪsᴀʙʟᴇᴅ sᴘᴇᴄɪᴀʟ ᴡᴇʟᴄᴏᴍᴇ ɪɴ ➥ {message.chat.title}")
-    
-    # Invalid state
-    else:
-        return await message.reply_text(usage)
+    try:
+        os.remove(f"downloads/welcome#{user.id}.png")
+        os.remove(f"downloads/pp{user.id}.png")
+    except Exception as e:
+        return
