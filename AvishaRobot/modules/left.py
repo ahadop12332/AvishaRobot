@@ -42,7 +42,6 @@ async def get_userinfo_img(
         resized = circular_img.resize((286, 286))
         bg.paste(resized, (297, 117), resized)
 
-
     img_draw = ImageDraw.Draw(bg)
 
     path = f"./userinfo_img_{user_id}.png"
@@ -107,6 +106,17 @@ async def member_has_left(client: app, member: ChatMemberUpdated):
 
 
 # --------------------------------------------------------------------------------- #
+# Simple in-memory database for managing goodbye states
+goodbye_enabled = {}
+
+async def add_wlcm(chat_id):
+    goodbye_enabled[chat_id] = True
+
+async def rm_wlcm(chat_id):
+    if chat_id in goodbye_enabled:
+        del goodbye_enabled[chat_id]
+
+# --------------------------------------------------------------------------------- #
 # Goodbye Enable/Disable Command
 @app.on_message(filters.command("zgoodbye", "/") & ~filters.private)
 async def auto_state(_, message):
@@ -119,7 +129,7 @@ async def auto_state(_, message):
         enums.ChatMemberStatus.ADMINISTRATOR,
         enums.ChatMemberStatus.OWNER,
     ):
-        A = await wlcm.find_one({"chat_id": chat_id})
+        A = goodbye_enabled.get(chat_id, False)
         state = message.text.split(None, 1)[1].strip().lower()
         if state == "enable":
             if A:
