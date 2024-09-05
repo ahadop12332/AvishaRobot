@@ -48,7 +48,7 @@ def welcomepic(pic, user, chat, id, uname):
     background.save(f"downloads/welcome#{id}.png")
     return f"downloads/welcome#{id}.png"
 
-@app.on_message(filters.command("zwelcome", COMMAND_HANDLER) & ~filters.public)
+@app.on_message(filters.command("zwelcome", COMMAND_HANDLER) & filters.group)  # Changed ~filters.public to filters.group
 async def auto_state(_, message):
     usage = "**❅ ᴜsᴀɢᴇ ➥ **/zwelcome [ᴇɴᴀʙʟᴇ|ᴅɪsᴀʙʟᴇ]"
     
