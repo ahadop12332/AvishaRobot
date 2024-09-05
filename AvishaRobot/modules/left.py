@@ -56,8 +56,60 @@ font_path = "AvishaRobot/Love/SwanseaBold-D0ox.ttf"
 
 # --------------------------------------------------------------------------------- #
 
+# Simple in-memory database for managing goodbye states
+goodbye_enabled = {}
+
+async def add_wlcm(chat_id):
+    goodbye_enabled[chat_id] = True
+
+async def rm_wlcm(chat_id):
+    if chat_id in goodbye_enabled:
+        del goodbye_enabled[chat_id]
+
+# --------------------------------------------------------------------------------- #
+# Goodbye Enable/Disable Command
+@app.on_message(filters.command("zgoodbye", "/") & ~filters.private)
+async def auto_state(_, message):
+    usage = "**❅ ᴜsᴀɢᴇ ➥ **/zgoodbye [ᴇɴᴀʙʟᴇ|ᴅɪsᴀʙʟᴇ]"
+    if len(message.command) == 1:
+        return await message.reply_text(usage)
+    chat_id = message.chat.id
+    user = await app.get_chat_member(message.chat.id, message.from_user.id)
+    if user.status in (
+        enums.ChatMemberStatus.ADMINISTRATOR,
+        enums.ChatMemberStatus.OWNER,
+    ):
+        A = goodbye_enabled.get(chat_id, False)
+        state = message.text.split(None, 1)[1].strip().lower()
+        if state == "enable":
+            if A:
+                return await message.reply_text("๏ sᴘᴇᴄɪᴀʟ ɢᴏᴏᴅʙʏᴇ ᴀʟʀᴇᴀᴅʏ ᴇɴᴀʙʟᴇᴅ")
+            else:
+                await add_wlcm(chat_id)
+                await message.reply_text(f"๏ ᴇɴᴀʙʟᴇᴅ sᴘᴇᴄɪᴀʟ ɢᴏᴏᴅʙʏᴇ ɪɴ ➥ {message.chat.title}")
+        elif state == "disable":
+            if not A:
+                return await message.reply_text("๏ sᴘᴇᴄɪᴀʟ ɢᴏᴏᴅʙʏᴇ ᴀʟʀᴇᴀᴅʏ ᴅɪsᴀʙʟᴇᴅ")
+            else:
+                await rm_wlcm(chat_id)
+                await message.reply_text(f"๏ ᴅɪsᴀʙʟᴇᴅ sᴘᴇᴄɪᴀʟ ɢᴏᴏᴅʙʏᴇ ɪɴ ➥ {message.chat.title}")
+        else:
+            await message.reply_text(usage)
+    else:
+        await message.reply("๏ ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ")
+
+
+# --------------------------------------------------------------------------------- #
+# Goodbye message handler when a member leaves
 @app.on_chat_member_updated(filters.group, group=20)
 async def member_has_left(client: app, member: ChatMemberUpdated):
+
+    chat_id = member.chat.id
+
+    # Check if goodbye is enabled for this chat
+    if not goodbye_enabled.get(chat_id, False):
+        # If goodbye is disabled, do not send any message
+        return
 
     if (
         not member.new_chat_member
@@ -103,47 +155,3 @@ async def member_has_left(client: app, member: ChatMemberUpdated):
     else:
         # Handle the case where the user has no profile photo
         print(f"𖣐 User {user.id} has no profile photo.")
-
-
-# --------------------------------------------------------------------------------- #
-# Simple in-memory database for managing goodbye states
-goodbye_enabled = {}
-
-async def add_wlcm(chat_id):
-    goodbye_enabled[chat_id] = True
-
-async def rm_wlcm(chat_id):
-    if chat_id in goodbye_enabled:
-        del goodbye_enabled[chat_id]
-
-# --------------------------------------------------------------------------------- #
-# Goodbye Enable/Disable Command
-@app.on_message(filters.command("zgoodbye", "/") & ~filters.private)
-async def auto_state(_, message):
-    usage = "**❅ ᴜsᴀɢᴇ ➥ **/zgoodbye [ᴇɴᴀʙʟᴇ|ᴅɪsᴀʙʟᴇ]"
-    if len(message.command) == 1:
-        return await message.reply_text(usage)
-    chat_id = message.chat.id
-    user = await app.get_chat_member(message.chat.id, message.from_user.id)
-    if user.status in (
-        enums.ChatMemberStatus.ADMINISTRATOR,
-        enums.ChatMemberStatus.OWNER,
-    ):
-        A = goodbye_enabled.get(chat_id, False)
-        state = message.text.split(None, 1)[1].strip().lower()
-        if state == "enable":
-            if A:
-                return await message.reply_text("๏ sᴘᴇᴄɪᴀʟ ɢᴏᴏᴅʙʏᴇ ᴀʟʀᴇᴀᴅʏ ᴇɴᴀʙʟᴇᴅ")
-            else:
-                await add_wlcm(chat_id)
-                await message.reply_text(f"๏ ᴇɴᴀʙʟᴇᴅ sᴘᴇᴄɪᴀʟ ɢᴏᴏᴅʙʏᴇ ɪɴ ➥ {message.chat.title}")
-        elif state == "disable":
-            if not A:
-                return await message.reply_text("๏ sᴘᴇᴄɪᴀʟ ɢᴏᴏᴅʙʏᴇ ᴀʟʀᴇᴀᴅʏ ᴅɪsᴀʙʟᴇᴅ")
-            else:
-                await rm_wlcm(chat_id)
-                await message.reply_text(f"๏ ᴅɪsᴀʙʟᴇᴅ sᴘᴇᴄɪᴀʟ ɢᴏᴏᴅʙʏᴇ ɪɴ ➥ {message.chat.title}")
-        else:
-            await message.reply_text(usage)
-    else:
-        await message.reply("๏ ᴏɴʟʏ ᴀᴅᴍɪɴs ᴄᴀɴ ᴜsᴇ ᴛʜɪs ᴄᴏᴍᴍᴀɴᴅ")
