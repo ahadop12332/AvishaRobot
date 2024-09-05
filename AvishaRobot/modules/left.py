@@ -2,10 +2,11 @@ from AvishaRobot import pbot as app
 from pyrogram import filters, enums
 from pyrogram.types import ChatMemberUpdated, InlineKeyboardMarkup, InlineKeyboardButton
 from AvishaRobot.database.wel_db import wlcm
+from PIL import Image, ImageDraw, ImageFont  # Ensure these are imported
 
 EVAA = [
     [
-        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url=f"https://t.me/avishaxbot?startgroup=true"),
+        InlineKeyboardButton(text="ᴀᴅᴅ ᴍᴇ ʙᴀʙʏ", url="https://t.me/avishaxbot?startgroup=true"),
     ],
 ]
 
@@ -21,8 +22,8 @@ resize_text = (
 async def get_userinfo_img(
     bg_path: str,
     font_path: str,
-    user_id: Union[int, str],
-    profile_path: Optional[str] = None
+    user_id: int,
+    profile_path: str = None
 ):
     bg = Image.open(bg_path)
 
@@ -44,13 +45,8 @@ async def get_userinfo_img(
     return path
 
 # --------------------------------------------------------------------------------- #
-
-bg_path = "AvishaRobot/Love/CUTELEF.jpg"
-font_path = "AvishaRobot/Love/SwanseaBold-D0ox.ttf"
-
-# --------------------------------------------------------------------------------- #
 # Goodbye message enable/disable command
-@app.on_message(filters.command("zgoodbye", COMMAND_HANDLER) & ~filters.public)
+@app.on_message(filters.command("zgoodbye", prefix='/') & ~filters.public)
 async def auto_goodbye_state(_, message):
     usage = "**❅ Usage ➥ **/zgoodbye [enable|disable]"
     if len(message.command) == 1:
@@ -58,7 +54,7 @@ async def auto_goodbye_state(_, message):
 
     chat_id = message.chat.id
     user = await app.get_chat_member(message.chat.id, message.from_user.id)
-    
+
     if user.status in (
         enums.ChatMemberStatus.ADMINISTRATOR,
         enums.ChatMemberStatus.OWNER,
@@ -122,7 +118,7 @@ async def member_has_left(client: app, member: ChatMemberUpdated):
                     caption=caption,
                     reply_markup=InlineKeyboardMarkup(EVAA),
                 )
-            except RPCError as e:
+            except Exception as e:  # Catch general exceptions
                 print(e)
                 return
         else:
