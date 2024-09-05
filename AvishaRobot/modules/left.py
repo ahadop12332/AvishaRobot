@@ -1,7 +1,9 @@
 from AvishaRobot import pbot as app
 from pyrogram import filters, enums
 from pyrogram.types import ChatMemberUpdated, InlineKeyboardMarkup, InlineKeyboardButton
+from typing import Union, Optional  # Importing Union and Optional correctly
 from AvishaRobot.database.wel_db import wlcm
+from PIL import Image, ImageDraw, ImageFont
 
 EVAA = [
     [
@@ -21,8 +23,8 @@ resize_text = (
 async def get_userinfo_img(
     bg_path: str,
     font_path: str,
-    user_id: Union[int, str],
-    profile_path: Optional[str] = None
+    user_id: Union[int, str],  # Using Union for user_id
+    profile_path: Optional[str] = None  # Optional profile path
 ):
     bg = Image.open(bg_path)
 
