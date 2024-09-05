@@ -52,9 +52,10 @@ font_path = "AvishaRobot/Love/SwanseaBold-D0ox.ttf"
 
 # --------------------------------------------------------------------------------- #
 # Goodbye message enable/disable command
-@app.on_message(filters.command("zgoodbye", COMMAND_HANDLER) & ~filters.public)
+@app.on_message(filters.command("zgoodbye", "/") & ~filters.public)
 async def auto_goodbye_state(_, message):
     usage = "**❅ Usage ➥ **/zgoodbye [enable|disable]"
+    # Rest of your code...
     if len(message.command) == 1:
         return await message.reply_text(usage)
 
