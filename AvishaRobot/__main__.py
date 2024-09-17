@@ -1142,9 +1142,9 @@ def main():
     if SUPPORT_CHAT is not None and isinstance(SUPPORT_CHAT, str):
         try:
             dispatcher.bot.send_photo(
-                f"@{SUPPORT_CHAT}",
-                photo=f"{START_IMG}",
-                caption=f"""
+    f"@{SUPPORT_CHAT}",
+    photo=f"{START_IMG}",
+    caption=f"""
 𖣐{BOT_NAME} ɪs ᴀʟɪᴠᴇ ʙᴀʙʏ 𖣐
 ━━━━━━━━ ⊱◈◈◈⊰ ━━━━━━━━
      
@@ -1155,9 +1155,10 @@ def main():
 
 **𖣐 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ [ʟ ᴜ ᴄ ʏ • / ‹𝟹](https://t.me/where_lucy)**
 ━━━━━━━━ ⊱◈◈◈⊰ ━━━━━━━━
-""",reply_markup=x,
-                parse_mode=ParseMode.MARKDOWN,
-            )
+""",
+    reply_markup=x,
+    parse_mode=ParseMode.MARKDOWN_V2
+)
         except Unauthorized:
             LOGGER.warning(
                 f"Bot isn't able to send message to @{SUPPORT_CHAT}, go and check!"
