@@ -1082,7 +1082,7 @@ def donate(update: Update, context: CallbackContext):
             DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
 
-        if OWNER_ID != 6922271843:
+        if OWNER_ID != 7202110938:
             update.effective_message.reply_text(
                 f"❅ ᴛʜᴇ ᴅᴇᴠᴇʟᴏᴩᴇʀ ᴏғ {dispatcher.bot.first_name} sᴏᴜʀᴄᴇ ᴄᴏᴅᴇ ɪs [ɢɪᴛʜᴜʙ](https://github.com/noob-mukesh/nothing?)"
                 f"\n\n❅ ʙᴜᴛ ʏᴏᴜ ᴄᴀɴ ᴀʟsᴏ ᴅᴏɴᴀᴛᴇ ᴛᴏ ᴛʜᴇ ᴩᴇʀsᴏɴ ᴄᴜʀʀᴇɴᴛʟʏ ʀᴜɴɴɪɴɢ ᴍᴇ : [ʜᴇʀᴇ]",
@@ -1145,14 +1145,16 @@ def main():
                 f"@{SUPPORT_CHAT}",
                 photo=f"{START_IMG}",
                 caption=f"""
-𖣐ㅤ{BOT_NAME} ɪs ᴀʟɪᴠᴇ ʙᴀʙʏ 𖣐
+𖣐{BOT_NAME} ɪs ᴀʟɪᴠᴇ ʙᴀʙʏ 𖣐
+━━━━━━━━ ⊱◈◈◈⊰ ━━━━━━━━
      
-**<b>● ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ ➠</b>** `{y()}`
-**<b>● ʟɪʙʀᴀʀʏ ᴠᴇʀsɪᴏɴ ➠</b>** `{telever}`
-**<b>● ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ ➠</b>** `{tlhver}`
-**<b>● ᴩʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ ➠</b>** `{pyrover}`
+**● ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ ➠** `{y()}`
+**● ʟɪʙʀᴀʀʏ ᴠᴇʀsɪᴏɴ ➠** `{telever}`
+**● ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ ➠** `{tlhver}`
+**● ᴩʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ ➠** `{pyrover}`
 
-<b>𖣐 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ [ʟ ᴜ ᴄ ʏ • / ‹𝟹](https://t.me/where_lucy)</b>
+**𖣐 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ [ʟ ᴜ ᴄ ʏ • / ‹𝟹](https://t.me/where_lucy)**
+━━━━━━━━ ⊱◈◈◈⊰ ━━━━━━━━
 """,reply_markup=x,
                 parse_mode=ParseMode.MARKDOWN,
             )
