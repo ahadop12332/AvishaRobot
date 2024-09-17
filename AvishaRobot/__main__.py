@@ -1146,15 +1146,13 @@ def main():
                 photo=f"{START_IMG}",
                 caption=f"""
 𖣐ㅤ{BOT_NAME} ɪs ᴀʟɪᴠᴇ ʙᴀʙʏ 𖣐
-     ━━━━━━━━ ⊱◈◈◈⊰ ━━━━━━━━
      
-**● ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ ➥** `{y()}`
-**● ʟɪʙʀᴀʀʏ ᴠᴇʀsɪᴏɴ ➥** `{telever}`
-**● ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ ➥** `{tlhver}`
-**● ᴩʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ ➥** `{pyrover}`
+<b>● ᴘʏᴛʜᴏɴ ᴠᴇʀsɪᴏɴ ➠</b> `{y()}`
+<b>● ʟɪʙʀᴀʀʏ ᴠᴇʀsɪᴏɴ ➠</b> `{telever}`
+<b>● ᴛᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ ➠</b> `{tlhver}`
+<b>● ᴩʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ ➠</b> `{pyrover}`
 
-**𖣐 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ [ʟ ᴜ ᴄ ʏ • / ‹𝟹](https://t.me/itsmeluccii)**
-     ━━━━━━━━ ⊱◈◈◈⊰ ━━━━━━━━
+<b>𖣐 ᴘᴏᴡᴇʀᴇᴅ ʙʏ ➥ [ʟ ᴜ ᴄ ʏ • / ‹𝟹](https://t.me/where_lucy)</b>
 """,reply_markup=x,
                 parse_mode=ParseMode.MARKDOWN,
             )
