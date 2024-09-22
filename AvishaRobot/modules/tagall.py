@@ -10,7 +10,7 @@ from AvishaRobot import telethn as client
 spam_chats = []
 
 @client.on(events.NewMessage(pattern="^/utag ?(.*)"))
-@client.on(events.NewMessage(pattern="^/tagall ?(.*)"))
+@client.on(events.NewMessage(pattern="^/all ?(.*)"))
 async def mentionall(event):
     chat_id = event.chat_id
     if event.is_private:
@@ -100,7 +100,7 @@ __mod_name__ = "ᴛᴀɢɢᴇʀ"
 
 __help__ = """
 
-⬤ /tagall ᴏʀ /utag ➥ ᴛᴏ ᴍᴇɴᴛɪᴏɴ ᴀʟʟ ᴍᴇᴍʙᴇʀs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
+⬤ /all ᴏʀ /utag ➥ ᴛᴏ ᴍᴇɴᴛɪᴏɴ ᴀʟʟ ᴍᴇᴍʙᴇʀs ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ.
 ⬤ /cancel ➥ sᴛᴏᴘ ᴛᴀɢɢɪɴɢ ʙᴀʙʏ.
 
 ⬤ /entag ➥ ᴇɴɢʟɪsʜ ᴛᴀɢ. || ● sᴛᴏᴘ ➣ /enstop
