@@ -110,6 +110,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="ʀᴇᴘᴏ", callback_data="gib_source"),
+        InlineKeyboardButton(text="ʙᴏᴛs", callback_data="avisha_"),
         InlineKeyboardButton(text="ᴀʙᴏᴜᴛ", callback_data="avisha_"),
     ],
     [
